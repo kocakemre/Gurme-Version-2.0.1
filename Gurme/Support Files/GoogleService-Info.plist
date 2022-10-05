@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>630178902441-cp70nl0bqeddgjmt985gi5vrnd6ief5c.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.630178902441-cp70nl0bqeddgjmt985gi5vrnd6ief5c</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC43Z_eNu8S-JwcKK_FEV3rq04Q7txGZqs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>630178902441</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.emrekocak.Gurme</string>
+	<key>PROJECT_ID</key>
+	<string>gurme-355e6</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gurme-355e6.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:630178902441:ios:02885b2916d01d307014b8</string>
+</dict>
+</plist>
