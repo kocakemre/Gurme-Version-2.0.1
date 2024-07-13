@@ -8,6 +8,7 @@
 import Foundation
 
 struct CartFoodResponse: Codable {
+    
     var sepet_yemekler: [CartFood]?
     var success:Int?
 }

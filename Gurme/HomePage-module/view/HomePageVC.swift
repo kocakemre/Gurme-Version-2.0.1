@@ -87,6 +87,11 @@ final class HomePageVC: UIViewController {
         let pushToVC = segue.destination as? FoodDetailPageVC
         pushToVC?.products = food
     }
+}
+
+// MARK: - Private Methods
+private
+extension HomePageVC {
     
     func startTimer() {
         timer = Timer.scheduledTimer(
@@ -97,6 +102,11 @@ final class HomePageVC: UIViewController {
             repeats: true
         )
     }
+}
+
+// MARK: - Action Methods
+private
+extension HomePageVC {
     
     @objc func moveToNextIndex() {
         
@@ -117,7 +127,7 @@ final class HomePageVC: UIViewController {
         pageControl.currentPage = currentCellIndex
     }
     
-    // MARK: - UI Elements
+    
     @IBAction func btnNotification_TUI(_ sender: Any) {
         
         let alert = UIAlertController(
@@ -134,7 +144,6 @@ final class HomePageVC: UIViewController {
 }
 
 // MARK: - UICollectionView Delegate & DataSource - Foods - Slider
-
 extension HomePageVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(
@@ -166,7 +175,7 @@ extension HomePageVC: UICollectionViewDelegate, UICollectionViewDataSource {
             guard  let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: "homeCell",
                 for: indexPath
-            ) as? CollectionViewCell_Slider else { return UICollectionViewCell() }
+            ) as? SliderCollectionViewCell else { return UICollectionViewCell() }
             
             cell.imageViewSliderFood.image = arraySliderPhotos[indexPath.row]
             
@@ -180,7 +189,7 @@ extension HomePageVC: UICollectionViewDelegate, UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: "foodCell",
                 for: indexPath
-            ) as? CollectionViewCell_Foods else { return UICollectionViewCell() }
+            ) as? FoodsCollectionViewCell else { return UICollectionViewCell() }
             
             cell.imageViewFood.image = UIImage(systemName: "photo")
             
@@ -206,7 +215,7 @@ extension HomePageVC: UICollectionViewDelegate, UICollectionViewDataSource {
     ) {
         let food = filteredFoodList[indexPath.row]
         performSegue(withIdentifier: "sgDetail", sender: food)
-        CollectionViewCell_Foods.productInfo = ProductDetailsList.productList[indexPath.row]
+        FoodsCollectionViewCell.productInfo = ProductDetailsList.productList[indexPath.row]
         collectionView.deselectItem(at: indexPath, animated: true)
     }
     
@@ -276,8 +285,7 @@ extension HomePageVC: UICollectionViewDelegateFlowLayout {
     }
 }
 
-// MARK: - Extension Protocol: Data transfer from BasketPresenter
-
+// MARK: - PresenterToViewHomePageProtocol
 extension HomePageVC: PresenterToViewHomePageProtocol {
     
     func dataTransferToView(foodList: Array<AllFood>) {
@@ -287,7 +295,7 @@ extension HomePageVC: PresenterToViewHomePageProtocol {
     }
 }
 
-// MARK: - Extension Search
+// MARK: - UISearchBarDelegate
 extension HomePageVC: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

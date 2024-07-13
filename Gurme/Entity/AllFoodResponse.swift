@@ -8,5 +8,6 @@
 import Foundation
 
 class AllFoodResponse: Codable {
+    
     var yemekler: [AllFood]?
 }

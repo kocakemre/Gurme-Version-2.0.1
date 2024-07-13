@@ -7,9 +7,9 @@
 
 import Foundation
 
-class LoginPresenter: ViewToPresenterLoginProtocol {
+final class LoginPresenter: ViewToPresenterLoginProtocol {
     
-    var loginInteractor: PresenterToInteractorLoginProtocol?
+    weak var loginInteractor: PresenterToInteractorLoginProtocol?
     var loginView: PresenterToViewLoginProtocol?
     
     func login(email: String, password: String) {
@@ -22,7 +22,7 @@ class LoginPresenter: ViewToPresenterLoginProtocol {
 
 // MARK: - InteractorToPresenterLoginProtocol
 extension LoginPresenter: InteractorToPresenterLoginProtocol {
-   
+    
     func dataTransferToPresenter(isSuccess: Bool) {
         loginView?.dataTransferToView(isSuccess: isSuccess)
     }

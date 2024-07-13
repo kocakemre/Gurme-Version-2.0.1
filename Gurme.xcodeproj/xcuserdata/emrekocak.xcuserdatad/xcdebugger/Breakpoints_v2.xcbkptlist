@@ -23,15 +23,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C8D313F4-BF24-4C48-9FB9-5352A44EE861"
+            uuid = "1C85A34F-392D-4860-9FF9-C60D92F0E25F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Gurme/Login-module/interactor/LoginInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "loginPerson(email:password:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -39,16 +39,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "76DD5B38-A1B1-4234-BD71-0BA93D4C9D1D"
+            uuid = "D9A701B0-617B-450D-8FD8-C391AAD937BD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Gurme/Login-module/interactor/LoginInteractor.swift"
+            filePath = "Gurme/Login-module/router/LoginRouter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "loginPerson(email:password:)"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "createRouter(ref:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84E24B90-4DF1-4708-8814-CD08B7BE4F1C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Gurme/Login-module/view/LoginVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "btnLoginClicked_TUI(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

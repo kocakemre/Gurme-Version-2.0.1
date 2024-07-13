@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ViewToPresenterCartPageProtocol {
+protocol ViewToPresenterCartPageProtocol: AnyObject {
     
     var cartPageInteractor: PresenterToInteractorCartPageProtocol? {get set}
     var cartPageView: PresenterToViewCartPageProtocol? {get set}
@@ -16,7 +16,7 @@ protocol ViewToPresenterCartPageProtocol {
     func delete(cart_food_id: String)
 }
 
-protocol PresenterToInteractorCartPageProtocol {
+protocol PresenterToInteractorCartPageProtocol: AnyObject {
     
     var cartPagePresenter: InteractorToPresenterCartPageProtocol? {get set}
 
@@ -24,17 +24,16 @@ protocol PresenterToInteractorCartPageProtocol {
     func foodDelete(cart_food_id: String)
 }
 
-protocol InteractorToPresenterCartPageProtocol {
+protocol InteractorToPresenterCartPageProtocol: AnyObject {
+    
     func dataTransferToPresenter(cartFoodsLists: Array<CartFood>)
 }
-protocol PresenterToViewCartPageProtocol {
+protocol PresenterToViewCartPageProtocol: AnyObject {
+    
     func dataTransferToView(cartFoodsLists: Array<CartFood>)
 }
 
-protocol PresenterToRouterCartPageProtocol {
-    static func createModule(ref: VC_CartPage)
+protocol PresenterToRouterCartPageProtocol: AnyObject {
+    
+    static func createModule(ref: CartPageVC)
 }
-
-
-
-

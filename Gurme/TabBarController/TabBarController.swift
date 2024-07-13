@@ -7,17 +7,17 @@
 
 import UIKit
 
-private class TabBarController: UITabBarController {
+private final class TabBarController: UITabBarController {
     
     static var customTabBarView = UIView(frame: .zero)
     
-    // MARK: - View Lifecycle
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var firstViewController:UIViewController = UIViewController()
+        let firstViewController:UIViewController = UIViewController()
         // The following statement is what you need
-        var customTabBarItem:UITabBarItem = UITabBarItem(
+        let customTabBarItem:UITabBarItem = UITabBarItem(
             title: nil,
             image: UIImage(named: "foodIcon")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal),
             selectedImage: UIImage(named: "foodIcon")
@@ -25,7 +25,7 @@ private class TabBarController: UITabBarController {
         firstViewController.tabBarItem = customTabBarItem
         
         self.tabBar.tintColor = UIColor(named: "MainOrangeColor")
-     
+        
         
         self.addCustomTabBarView()
     }
@@ -35,8 +35,10 @@ private class TabBarController: UITabBarController {
         
         self.setupCustomTabBarFrame()
     }
-    
-    // MARK: - Private Methods
+}
+
+// MARK: - Private Methods
+extension TabBarController {
     
     private func setupCustomTabBarFrame() {
         let height = self.view.safeAreaInsets.bottom + 64
@@ -50,27 +52,6 @@ private class TabBarController: UITabBarController {
         self.tabBar.layoutIfNeeded()
         TabBarController.customTabBarView.frame = tabBar.frame
     }
-    
-//    private func setupTabBarUI() {
-//        // Setup your colors and corner radius
-//        self.tabBar.backgroundColor = UIColor.blue
-//        //           self.tabBar.cornerRadius = 30
-//        self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-//        self.tabBar.backgroundColor = .red
-//        self.tabBar.tintColor = .black
-//        self.tabBar.unselectedItemTintColor = UIColor.yellow
-//
-//        // Remove the line
-//        if #available(iOS 13.0, *) {
-//            let appearance = self.tabBar.standardAppearance
-//            appearance.shadowImage = nil
-//            appearance.shadowColor = nil
-//            self.tabBar.standardAppearance = appearance
-//        } else {
-//            self.tabBar.shadowImage = UIImage()
-//            self.tabBar.backgroundImage = UIImage()
-//        }
-//    }
     
     private func addCustomTabBarView() {
         

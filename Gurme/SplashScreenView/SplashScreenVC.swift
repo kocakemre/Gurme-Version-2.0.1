@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SplashScreenVC.swift
 //  Gurme
 //
 //  Created by Emre Kocak on 24.09.2022.
@@ -8,7 +8,7 @@
 import UIKit
 import Lottie
 
-class VC_SplashScreen: UIViewController {
+final class SplashScreenVC: UIViewController {
 
     // MARK: - Life Cycles
     override func viewDidLoad() {
@@ -38,4 +38,3 @@ class VC_SplashScreen: UIViewController {
         })
     }
 }
-

@@ -9,7 +9,7 @@ import Foundation
 
 class CreateAccountRouter: PresenterToRouterCreateAccountProtocol {
     
-    static func createModule(ref: VC_CreateAccount) {
+    static func createModule(ref: CreateAccountVC) {
         let presenter = CreateAccountPresenter()
         
         // View

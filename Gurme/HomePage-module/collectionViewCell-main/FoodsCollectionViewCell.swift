@@ -1,5 +1,5 @@
 //
-//  CollectionViewCell_Foods.swift
+//  FoodsCollectionViewCell.swift
 //  Gurme
 //
 //  Created by Emre Kocak on 30.09.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CollectionViewCell_Foods: UICollectionViewCell {
+final class FoodsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageViewFood: UIImageView!
     @IBOutlet weak var labelPrice: UILabel!
@@ -24,7 +24,7 @@ class CollectionViewCell_Foods: UICollectionViewCell {
     }
     
     
-    @IBAction func btnFavoriteClicked_TUI(_ sender: Any) {
+    @IBAction private func btnFavoriteClicked_TUI(_ sender: Any) {
         if favoriteBtnIsTapped == true {
             imageViewFavorite.image = UIImage(named: "favoriIconFull")
             favoriteBtnIsTapped = false
@@ -32,5 +32,4 @@ class CollectionViewCell_Foods: UICollectionViewCell {
             imageViewFavorite.image = UIImage(named: "favoriteIconEmpty")
         }
     }
-    
 }

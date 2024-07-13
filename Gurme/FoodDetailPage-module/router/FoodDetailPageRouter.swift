@@ -7,8 +7,7 @@
 
 import Foundation
 
-
-class DetailPageRouter: PresenterToRouterDetailPageProtocol {
+final class DetailPageRouter: PresenterToRouterDetailPageProtocol {
     
     static func createModule(ref: FoodDetailPageVC) {
         let presenter = DetailPagePresenter()

@@ -1,5 +1,5 @@
 //
-//  VC_CartPage.swift
+//  CartPageVC.swift
 //  Gurme
 //
 //  Created by Emre Kocak on 2.10.2022.
@@ -9,28 +9,8 @@ import UIKit
 import Lottie
 import Firebase
 
-class ItemsList {
+final class CartPageVC: UIViewController {
     
-    var foodName: String?
-    var foodOrderCount: Int?
-    var foodPrice: Int?
-    var food_id: [String]?
-    
-    init(
-        foodName: String,
-        foodOrderCount: Int,
-        foodPrice: Int,
-        food_id: [String]
-    ) {
-        self.foodName = foodName
-        self.foodOrderCount = foodOrderCount
-        self.foodPrice = foodPrice
-        self.food_id = food_id
-    }
-}
-
-class VC_CartPage: UIViewController {
-
     // MARK: - UI Elements
     @IBOutlet weak var lottieView: AnimationView!
     @IBOutlet weak var tableViewCart: UITableView!
@@ -39,26 +19,23 @@ class VC_CartPage: UIViewController {
     @IBOutlet weak var btnCartConfirm: UIButton!
     @IBOutlet weak var btnTrash: UIButton!
     
-    var foods = [CartFood]()
+    private var foods = [CartFood]()
+    weak var cartPagePresenterObject: ViewToPresenterCartPageProtocol?
+    private var filteredFoodArray = [ItemsList]()
+    private var sum : Int = 0
+    private var priceCalculation = 0.0
     
-    var cartPagePresenterObject: ViewToPresenterCartPageProtocol?
-   
-    
-    var filteredFoodArray = [ItemsList]()
-    var sum : Int = 0
-    var priceCalculation = 0.0
     // MARK: - Life Cycles
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         btnTrash.titleLabel?.text = ""
         self.cartAnimation()
-      
+        
         tableViewCart.delegate = self
         tableViewCart.dataSource = self
         confirmLottieView.isHidden = true
         CartPageRouter.createModule(ref: self)
-       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -75,8 +52,48 @@ class VC_CartPage: UIViewController {
         self.cartAnimation()
         self.tableViewCart.reloadData()
     }
+}
+
+// MARK: - Action Methods
+extension CartPageVC {
     
-    // MARK: - Methods
+    @IBAction func btnTrash_TUI(_ sender: Any) {
+        let alert = UIAlertController(
+            title: "Uyarı",
+            message: "Sepetinizdeki tüm ürünler silinsin mi?",
+            preferredStyle: .alert
+        )
+        let cancel = UIAlertAction(title: "Vazgeç", style: .default)
+        let delete = UIAlertAction(title: "Sil", style: .destructive) { [self] _ in
+            for food in self.foods {
+                self.cartPagePresenterObject?.delete(cart_food_id: food.sepet_yemek_id!)
+                
+            }
+            self.foods.removeAll()
+            self.tableViewCart.reloadData()
+        }
+        alert.addAction(delete)
+        alert.addAction(cancel)
+        
+        present(alert, animated: true)
+        
+    }
+    
+    @IBAction func btnSwitch(_ sender: Any) {}
+    
+    @IBAction func btnCartConfirm_TUI(_ sender: Any) {
+        
+        guard foods.count >= 1 else { return }
+        confirmLottieView.isHidden = false
+        btnCartConfirm.titleLabel?.text = "Sepet Onaylandı"
+        btnCartConfirm.backgroundColor = .gray
+        self.cartConfirmAnimation()
+    }
+}
+
+// MARK: - Private Methods
+private
+extension CartPageVC {
     
     func cartConfirmAnimation() {
         
@@ -85,7 +102,7 @@ class VC_CartPage: UIViewController {
         confirmLottieView.loopMode = .playOnce
         confirmLottieView.animationSpeed = 0.5
         
-        if (!confirmLottieView.isAnimationPlaying){
+        if (!confirmLottieView.isAnimationPlaying) {
             confirmLottieView.play()
         }
     }
@@ -97,12 +114,12 @@ class VC_CartPage: UIViewController {
         lottieView.loopMode = .loop
         lottieView.animationSpeed = 0.5
         
-        if (!lottieView.isAnimationPlaying){
+        if (!lottieView.isAnimationPlaying) {
             lottieView.play()
         }
     }
     
-    func get_total(){
+    func get_total() {
         var total = 0
         var textToplam : Int = 0
         
@@ -112,69 +129,37 @@ class VC_CartPage: UIViewController {
             
         }
         labelTotalPrice.text = "TOTAL: \(String(textToplam)) TL"
-        
     }
-
-  
-    // MARK: - UI Elements
-
-    @IBAction func btnTrash_TUI(_ sender: Any) {
-        let alert = UIAlertController(title: "Uyarı", message: "Sepetinizdeki tüm ürünler silinsin mi?", preferredStyle: .alert)
-        let cancel = UIAlertAction(title: "Vazgeç", style: .default)
-        let delete = UIAlertAction(title: "Sil", style: .destructive) { [self] _ in
-            for food in self.foods {
-                self.cartPagePresenterObject?.delete(cart_food_id: food.sepet_yemek_id!)
-              
-            }
-            self.foods.removeAll()
-            self.tableViewCart.reloadData()
-        }
-        alert.addAction(delete)
-        alert.addAction(cancel)
-       
-        present(alert, animated: true)
-      
-    }
-    
-    @IBAction func btnSwitch(_ sender: Any) {
-        
-    }
-    
-    @IBAction func btnCartConfirm_TUI(_ sender: Any) {
-       
-      
-        if foods.count >= 1 {
-            confirmLottieView.isHidden = false
-            btnCartConfirm.titleLabel?.text = "Sepet Onaylandı"
-            btnCartConfirm.backgroundColor = .gray
-            self.cartConfirmAnimation()
-        }
-       
-    }
-    
-   
 }
 
-
-     // MARK: - Extension
-
-extension VC_CartPage: UITableViewDelegate, UITableViewDataSource {
+// MARK: - UITableViewDelegate & DataSource
+extension CartPageVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foods.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        
         let food = foods[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cartCell", for: indexPath) as! TableViewCell_Cart
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: "cartCell",
+            for: indexPath
+        ) as? CartTableViewCell else {
+            return UITableViewCell()
+        }
         cell.labelFoodName.text = food.yemek_adi
-        let newCount = Double(food.yemek_siparis_adet!)!
-        let newPrice = Double(food.yemek_fiyat!)!
+        let newCount = Double(food.yemek_siparis_adet ?? "") ?? 0.0
+        let newPrice = Double(food.yemek_fiyat ?? "") ?? 0.0
         priceCalculation = newCount * newPrice
         cell.labelPrice.text = "\(String(priceCalculation)) ₺"
         
-        cell.labelFoodCount.text = String(food.yemek_siparis_adet!)
-        if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)") {
+        cell.labelFoodCount.text = String(food.yemek_siparis_adet ?? "")
+        
+        if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi ?? "")") {
             DispatchQueue.main.async {
                 cell.imageViewFood.kf.setImage(with: url)
             }
@@ -183,17 +168,16 @@ extension VC_CartPage: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    func tableView(
+        _ tableView: UITableView,
+        trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath
+    ) -> UISwipeActionsConfiguration? {
         
         let deleteAction = UIContextualAction(style: .destructive, title: "Sil") { contexttualAction, view, bool in
             let food = self.foods[indexPath.row]
             
             let alert = UIAlertController(title: "\(food.yemek_adi!) sepetinizden silinsin mi?", message: "", preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "Vazgeç", style: .cancel) { action in
-                
-                
-            }
+            let cancelAction = UIAlertAction(title: "Vazgeç", style: .cancel) { action in }
             alert.addAction(cancelAction)
             
             let yesAction = UIAlertAction(title: "Evet", style: .destructive) { action in
@@ -202,28 +186,17 @@ extension VC_CartPage: UITableViewDelegate, UITableViewDataSource {
                 self.tableViewCart.reloadData()
             }
             
-            
             alert.addAction(yesAction)
             
             self.present(alert, animated: true)
             self.get_total()
-            
-        /*
-            if let foodId = food.sepet_yemek_id {
-                for id in foodId {
-                    self.cartPagePresenterObject?.delete(cart_food_id: String(id))
-                }
-                self.foods.remove(at: indexPath.row)
-                self.get_total()
-                self.tableViewCart.reloadData()
-            } */
         }
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
-    
 }
 
-extension VC_CartPage: PresenterToViewCartPageProtocol {
+// MARK: - PresenterToViewCartPageProtocol
+extension CartPageVC: PresenterToViewCartPageProtocol {
     
     func dataTransferToView(cartFoodsLists: Array<CartFood>) {
         self.foods = cartFoodsLists
@@ -251,12 +224,12 @@ extension VC_CartPage: PresenterToViewCartPageProtocol {
                 price += Int(food.yemek_fiyat!)!
                 print("\(price) yemek fiyat")
             }
-           // filteredArray.append(CartFoodResponse(sepet_yemek_id: foods.sepet_yemek_id, yemek_adi: <#T##String#>, yemek_resim_adi: <#T##String#>, yemek_fiyat: <#T##String#>, yemek_siparis_adet: <#T##String#>, kullanici_adi: <#T##String#>))
+            
             if filteredArray.count > 0 {
                 self.foods = filteredArray
             }
         }
-
+        
         tableViewCart.reloadData()
     }
 }

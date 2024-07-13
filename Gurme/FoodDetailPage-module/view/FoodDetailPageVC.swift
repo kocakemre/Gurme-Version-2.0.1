@@ -75,11 +75,11 @@ extension FoodDetailPageVC {
                 self.imageViewFood.kf.setImage(with: url)
             }
         }
-        if CollectionViewCell_Foods.productInfo != nil {
+        if FoodsCollectionViewCell.productInfo != nil {
             
-            labelFoodStar.text = CollectionViewCell_Foods.productInfo?.star
-            labelFoodDescription.text = CollectionViewCell_Foods.productInfo?.description
-            labelFoodPrepareTime.text = CollectionViewCell_Foods.productInfo?.prepareTime
+            labelFoodStar.text = FoodsCollectionViewCell.productInfo?.star
+            labelFoodDescription.text = FoodsCollectionViewCell.productInfo?.description
+            labelFoodPrepareTime.text = FoodsCollectionViewCell.productInfo?.prepareTime
         }
     }
     

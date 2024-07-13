@@ -7,8 +7,9 @@
 
 import Foundation
 
-class CartPagePresenter: ViewToPresenterCartPageProtocol {
-    var cartPageInteractor: PresenterToInteractorCartPageProtocol?
+final class CartPagePresenter: ViewToPresenterCartPageProtocol {
+    
+    weak var cartPageInteractor: PresenterToInteractorCartPageProtocol?
     
     var cartPageView: PresenterToViewCartPageProtocol?
     
@@ -19,15 +20,12 @@ class CartPagePresenter: ViewToPresenterCartPageProtocol {
     func delete(cart_food_id: String) {
         cartPageInteractor?.foodDelete(cart_food_id: cart_food_id)
     }
-   
-
 }
 
+// MARK: - InteractorToPresenterCartPageProtocol
 extension CartPagePresenter: InteractorToPresenterCartPageProtocol {
     
     func dataTransferToPresenter(cartFoodsLists: Array<CartFood>) {
         cartPageView?.dataTransferToView(cartFoodsLists: cartFoodsLists)
     }
-    
- 
 }

@@ -8,12 +8,15 @@
 import Foundation
 import Alamofire
 
-class HomePageInteractor: PresenterToInteractorHomePageProtocol{
+final class HomePageInteractor: PresenterToInteractorHomePageProtocol{
     
     var homePagePresenter: InteractorToPresenterHomePageProtocol?
     
     func getAllFoods() {
-        AF.request("http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php", method: .get).response { response in
+        AF.request(
+            "http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php",
+            method: .get
+        ).response { response in
             
             if let data = response.data {
                 do{
@@ -31,7 +34,11 @@ class HomePageInteractor: PresenterToInteractorHomePageProtocol{
     
     func searchFood(food_name: String) {
         let params: Parameters = ["yemek_adi":food_name]
-        AF.request("http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php", method: .post, parameters: params).response { response in
+        AF.request(
+            "http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php",
+            method: .post,
+            parameters: params
+        ).response { response in
             
             if let data = response.data {
                 do {
@@ -46,8 +53,20 @@ class HomePageInteractor: PresenterToInteractorHomePageProtocol{
         }
     }
     
-    func addOrder(food_name: String, food_image_name: String, food_price: Int, food_order_count: Int, currentUser: String) {
-        let params: Parameters = ["yemek_adi": food_name, "yemek_resim_adi": food_image_name, "yemek_fiyat": food_price, "yemek_siparis_adet": food_order_count, "kullanici_adi": currentUser]
+    func addOrder(
+        food_name: String,
+        food_image_name: String,
+        food_price: Int,
+        food_order_count: Int,
+        currentUser: String
+    ) {
+        let params: Parameters = [
+            "yemek_adi": food_name,
+            "yemek_resim_adi": food_image_name,
+            "yemek_fiyat": food_price,
+            "yemek_siparis_adet": food_order_count,
+            "kullanici_adi": currentUser
+        ]
         AF.request("http://kasimadalan.pe.hu/yemekler/sepeteYemekEkle.php", method: .post, parameters: params).response { response in
             if let data = response.data {
                 do {
@@ -59,6 +78,4 @@ class HomePageInteractor: PresenterToInteractorHomePageProtocol{
             }
         }
     }
-    
-    
 }

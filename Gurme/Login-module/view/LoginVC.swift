@@ -36,17 +36,22 @@ final class LoginVC: UIViewController {
         self.loginAnimation()
     }
     
-    // MARK: - Methods
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
 }
 
 // MARK: - Action Methods
+
 extension LoginVC {
     
-    @IBAction func btnLoginClicked_TUI(_ sender: Any) {
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    @IBAction private func btnLoginClicked_TUI(_ sender: Any) {
         
+        /// Firebase has been disabled and direct redirection to the application has been provided.
         //        if textFieldEmail.text != "" && textFieldPassword.text != "" {
         //            self.lottieView2.isHidden = false
         //            self.btnLoginClickedAnimation()
@@ -66,13 +71,15 @@ extension LoginVC {
         
         self.lottieView2.isHidden = false
         self.btnLoginClickedAnimation()
-        loginPresenterObject?.login(
-            email: textFieldEmail.text ?? "",
-            password: textFieldPassword.text ?? ""
-        )
+//        loginPresenterObject?.login(
+//            email: textFieldEmail.text ?? "",
+//            password: textFieldPassword.text ?? ""
+//        )
+        
+        self.performSegue(withIdentifier: "toHome", sender: nil)
     }
     
-    @IBAction func btnCreateAccountClicked_TUI(_ sender: Any) {
+    @IBAction private func btnCreateAccountClicked_TUI(_ sender: Any) {
         performSegue(withIdentifier: "sgCreateAccount", sender: nil)
     }
     
@@ -92,10 +99,6 @@ extension LoginVC {
             action: #selector(UIInputViewController.dismissKeyboard)
         )
         view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
     }
     
     func navigationControllerCustom() {

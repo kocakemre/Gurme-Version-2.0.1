@@ -7,9 +7,9 @@
 
 import Foundation
 
-class CartPageRouter: PresenterToRouterCartPageProtocol {
+final class CartPageRouter: PresenterToRouterCartPageProtocol {
     
-    static func createModule(ref: VC_CartPage) {
+    static func createModule(ref: CartPageVC) {
         
         let presenter : ViewToPresenterCartPageProtocol & InteractorToPresenterCartPageProtocol = CartPagePresenter()
         
@@ -20,5 +20,4 @@ class CartPageRouter: PresenterToRouterCartPageProtocol {
         
         ref.cartPagePresenterObject?.cartPageInteractor?.cartPagePresenter = presenter
     }
-    
 }
