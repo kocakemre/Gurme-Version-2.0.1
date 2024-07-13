@@ -13,14 +13,17 @@ class LoginPresenter: ViewToPresenterLoginProtocol {
     var loginView: PresenterToViewLoginProtocol?
     
     func login(email: String, password: String) {
-        loginInteractor?.loginPerson(email: email, password: password)
+        loginInteractor?.loginPerson(
+            email: email,
+            password: password
+        )
     }
 }
 
+// MARK: - InteractorToPresenterLoginProtocol
 extension LoginPresenter: InteractorToPresenterLoginProtocol {
    
     func dataTransferToPresenter(isSuccess: Bool) {
         loginView?.dataTransferToView(isSuccess: isSuccess)
     }
-    
 }

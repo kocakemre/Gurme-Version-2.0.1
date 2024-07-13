@@ -8,34 +8,47 @@
 import Foundation
 
 // MARK: - Main Protocols
-protocol ViewToPresenterHomePageProtocol {
+protocol ViewToPresenterHomePageProtocol: AnyObject {
+    
     var homePageInteractor: PresenterToInteractorHomePageProtocol? { get set }
     var homePageView: PresenterToViewHomePageProtocol? { get set }
     
     func allFoods()
     func search(food_name: String)
-    func order(food_name: String, food_image_name: String, food_price: Int, food_order_count: Int, currentUser: String)
+    func order(
+        food_name: String,
+        food_image_name: String,
+        food_price: Int,
+        food_order_count: Int,
+        currentUser: String
+    )
 }
 
-protocol PresenterToInteractorHomePageProtocol {
+protocol PresenterToInteractorHomePageProtocol: AnyObject {
+    
     var homePagePresenter: InteractorToPresenterHomePageProtocol? { get set }
     
     func getAllFoods()
     func searchFood(food_name: String)
-    func addOrder(food_name: String, food_image_name: String, food_price: Int, food_order_count: Int, currentUser: String)
-    
+    func addOrder(
+        food_name: String,
+        food_image_name: String,
+        food_price: Int,
+        food_order_count: Int,
+        currentUser: String
+    )
 }
 
 // MARK: - Transfer Protocols
-protocol InteractorToPresenterHomePageProtocol {
+protocol InteractorToPresenterHomePageProtocol: AnyObject {
     func dataTransferToPresenter(foodList: Array<AllFood>)
 }
 
-protocol PresenterToViewHomePageProtocol {
+protocol PresenterToViewHomePageProtocol: AnyObject {
     func dataTransferToView(foodList: Array<AllFood>)
 }
 
 // MARK: - Router Protocols
-protocol PresenterToRouterHomePageProtocol {
-    static func createModule(ref: VC_HomePage)
+protocol PresenterToRouterHomePageProtocol: AnyObject {
+    static func createModule(ref: HomePageVC)
 }

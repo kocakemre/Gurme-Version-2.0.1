@@ -16,7 +16,12 @@ class ItemsList {
     var foodPrice: Int?
     var food_id: [String]?
     
-    init(foodName: String, foodOrderCount: Int, foodPrice: Int, food_id: [String]) {
+    init(
+        foodName: String,
+        foodOrderCount: Int,
+        foodPrice: Int,
+        food_id: [String]
+    ) {
         self.foodName = foodName
         self.foodOrderCount = foodOrderCount
         self.foodPrice = foodPrice

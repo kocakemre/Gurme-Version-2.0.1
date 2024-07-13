@@ -7,9 +7,9 @@
 
 import Foundation
 
-class HomePageRouter: PresenterToRouterHomePageProtocol {
+final class HomePageRouter: PresenterToRouterHomePageProtocol {
     
-    static func createModule(ref: VC_HomePage) {
+    static func createModule(ref: HomePageVC) {
         let presenter = HomePagePresenter()
         
         // View
@@ -22,6 +22,4 @@ class HomePageRouter: PresenterToRouterHomePageProtocol {
         // Interactor
         ref.homePagePresenterObject?.homePageInteractor?.homePagePresenter = presenter
     }
-    
-
 }

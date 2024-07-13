@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rTS-hs-DD5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rTS-hs-DD5">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -169,7 +169,7 @@
         <!--Giriş-->
         <scene sceneID="XLc-e9-ymw">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="eU5-k5-k0P" customClass="VC_Login" customModule="Gurme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="eU5-k5-k0P" customClass="LoginVC" customModule="Gurme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MVp-Zz-HoC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -483,10 +483,10 @@
             </objects>
             <point key="canvasLocation" x="1211" y="2024"/>
         </scene>
-        <!--Food Detail Page-->
+        <!--Food Detail PageVC-->
         <scene sceneID="r8n-rh-E1P">
             <objects>
-                <viewController id="pTz-AC-U4K" customClass="VC_FoodDetailPage" customModule="Gurme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pTz-AC-U4K" customClass="FoodDetailPageVC" customModule="Gurme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A5Y-wf-bk6">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -501,7 +501,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vI9-MM-gxp">
-                                        <rect key="frame" x="15.999999999999996" y="60.666666666666671" width="38.666666666666657" height="34.333333333333329"/>
+                                        <rect key="frame" x="16.000000000000004" y="60.666666666666671" width="36.333333333333343" height="34.333333333333329"/>
                                         <color key="tintColor" name="MainPurpleColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="back" title="."/>
@@ -1240,10 +1240,10 @@
             </objects>
             <point key="canvasLocation" x="236.92307692307691" y="1077.0142180094786"/>
         </scene>
-        <!--Home Page-->
+        <!--Home PageVC-->
         <scene sceneID="uSf-qM-4Jg">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="0nf-xG-tvJ" customClass="VC_HomePage" customModule="Gurme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="0nf-xG-tvJ" customClass="HomePageVC" customModule="Gurme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xY6-Y5-xyK">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2121,7 +2121,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message.badge.filled.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KVi-QV-BLi">
-                                        <rect key="frame" x="5" y="58.999999999999986" width="30" height="29.333333333333329"/>
+                                        <rect key="frame" x="5" y="57.999999999999986" width="30" height="30.333333333333329"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4Ft-gR-J2V">
                                         <rect key="frame" x="5" y="101" width="30" height="28.666666666666671"/>
@@ -2253,10 +2253,10 @@
             </objects>
             <point key="canvasLocation" x="4064.6153846153843" y="1076.3033175355449"/>
         </scene>
-        <!--On Boarding-->
+        <!--On BoardingVC-->
         <scene sceneID="XHz-aK-Ru2">
             <objects>
-                <viewController id="rTS-hs-DD5" customClass="VC_OnBoarding" customModule="Gurme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rTS-hs-DD5" customClass="OnBoardingVC" customModule="Gurme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aDa-7N-Gkj">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2349,31 +2349,31 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EKE-qn-q5n"/>
+        <segue reference="2WV-yi-S7G"/>
         <segue reference="YNO-7w-ndf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="appleIcon" width="30" height="30"/>
-        <image name="back" width="10" height="17"/>
+        <image name="back" width="8" height="13"/>
         <image name="bell.fill" catalog="system" width="123" height="128"/>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="catalBicakIcon" width="20" height="20"/>
         <image name="clock.fill" catalog="system" width="128" height="123"/>
         <image name="emptyFavorite" width="254" height="227"/>
         <image name="facebookIcon" width="48" height="48"/>
-        <image name="folder.badge.gearshape" catalog="system" width="128" height="91"/>
+        <image name="folder.badge.gearshape" catalog="system" width="128" height="93"/>
         <image name="goButton" width="50" height="50"/>
         <image name="googleIcon" width="48" height="48"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>
-        <image name="message.badge.filled.fill" catalog="system" width="128" height="116"/>
+        <image name="message.badge.filled.fill" catalog="system" width="128" height="122"/>
         <image name="network" catalog="system" width="128" height="123"/>
         <image name="orderLine" width="414" height="35"/>
         <image name="questionmark.circle" catalog="system" width="128" height="123"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <image name="testFood" width="800" height="533"/>
-        <image name="trash.fill" catalog="system" width="119" height="128"/>
+        <image name="trash.fill" catalog="system" width="117" height="128"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -2390,7 +2390,7 @@
             <color red="0.80400002002716064" green="0.063000001013278961" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

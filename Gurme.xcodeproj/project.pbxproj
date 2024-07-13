@@ -18,11 +18,11 @@
 		F514DD2128E4AB5900A7712F /* VC_CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = F514DD2028E4AB5900A7712F /* VC_CreateAccount.swift */; };
 		F514DD2428E4B3C300A7712F /* account.json in Resources */ = {isa = PBXBuildFile; fileRef = F514DD2228E4B3C300A7712F /* account.json */; };
 		F514DD2528E4B3C300A7712F /* party.json in Resources */ = {isa = PBXBuildFile; fileRef = F514DD2328E4B3C300A7712F /* party.json */; };
-		F514DD2728E4B66F00A7712F /* VC_Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = F514DD2628E4B66F00A7712F /* VC_Login.swift */; };
+		F514DD2728E4B66F00A7712F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F514DD2628E4B66F00A7712F /* LoginVC.swift */; };
 		F514DD2928E4E3E500A7712F /* VC_ForgetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = F514DD2828E4E3E500A7712F /* VC_ForgetPassword.swift */; };
 		F514DD2B28E4E6D500A7712F /* lock.json in Resources */ = {isa = PBXBuildFile; fileRef = F514DD2A28E4E6D500A7712F /* lock.json */; };
 		F538EA8928DF0F5F0087E4EE /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F538EA8828DF0F5F0087E4EE /* Lottie */; };
-		F538EA8F28DF114E0087E4EE /* VC_HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538EA8E28DF114E0087E4EE /* VC_HomePage.swift */; };
+		F538EA8F28DF114E0087E4EE /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538EA8E28DF114E0087E4EE /* HomePageVC.swift */; };
 		F561BD4228E8779C0010B920 /* VC_FoodDetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F561BD4128E8779C0010B920 /* VC_FoodDetailPage.swift */; };
 		F561BD4D28E8C4690010B920 /* FoodDetailPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F561BD4C28E8C4690010B920 /* FoodDetailPagePresenter.swift */; };
 		F561BD4F28E8C6960010B920 /* FoodDetailPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F561BD4E28E8C6960010B920 /* FoodDetailPageInteractor.swift */; };
@@ -37,10 +37,8 @@
 		F561BD6928E9CBF70010B920 /* TableViewCell_Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = F561BD6828E9CBF70010B920 /* TableViewCell_Cart.swift */; };
 		F561BD6B28E9CEB30010B920 /* deliveryBike.json in Resources */ = {isa = PBXBuildFile; fileRef = F561BD6A28E9CEB30010B920 /* deliveryBike.json */; };
 		F564C08728DFA82100282EEE /* burger.json in Resources */ = {isa = PBXBuildFile; fileRef = F564C08628DFA82100282EEE /* burger.json */; };
-		F564C08B28DFAFA700282EEE /* VC_OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F564C08A28DFAFA700282EEE /* VC_OnBoarding.swift */; };
+		F564C08B28DFAFA700282EEE /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F564C08A28DFAFA700282EEE /* OnBoardingVC.swift */; };
 		F564C08D28DFAFD300282EEE /* OnBoardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F564C08C28DFAFD300282EEE /* OnBoardingSlide.swift */; };
-		F564C09128DFB47C00282EEE /* CollectionViewCell_OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F564C08F28DFB47C00282EEE /* CollectionViewCell_OnBoarding.swift */; };
-		F564C09228DFB47C00282EEE /* CollectionViewCell_OnBoarding.xib in Resources */ = {isa = PBXBuildFile; fileRef = F564C09028DFB47C00282EEE /* CollectionViewCell_OnBoarding.xib */; };
 		F58B39D028E0812700C4ED62 /* motorcycleDelivery.json in Resources */ = {isa = PBXBuildFile; fileRef = F58B39CB28E0812700C4ED62 /* motorcycleDelivery.json */; };
 		F58B39D128E0812700C4ED62 /* order.json in Resources */ = {isa = PBXBuildFile; fileRef = F58B39CC28E0812700C4ED62 /* order.json */; };
 		F58B39D228E0812700C4ED62 /* deliveryGuyOrder.json in Resources */ = {isa = PBXBuildFile; fileRef = F58B39CD28E0812700C4ED62 /* deliveryGuyOrder.json */; };
@@ -71,6 +69,8 @@
 		F59377B628E746FB00BF51C1 /* AllFoodResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59377B528E746FB00BF51C1 /* AllFoodResponse.swift */; };
 		F59377B828E7475400BF51C1 /* CartFoodResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59377B728E7475400BF51C1 /* CartFoodResponse.swift */; };
 		F596139528EA3FE500C6F7B9 /* tik.json in Resources */ = {isa = PBXBuildFile; fileRef = F596139428EA3FE500C6F7B9 /* tik.json */; };
+		F5DFCDF12C42F24500600D05 /* CollectionViewCell_OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DFCDEF2C42F24500600D05 /* CollectionViewCell_OnBoarding.swift */; };
+		F5DFCDF22C42F24500600D05 /* CollectionViewCell_OnBoarding.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5DFCDF02C42F24500600D05 /* CollectionViewCell_OnBoarding.xib */; };
 		F5EF2C5B28E7294C00F67BDD /* CollectionViewCell_Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EF2C5A28E7294C00F67BDD /* CollectionViewCell_Slider.swift */; };
 /* End PBXBuildFile section */
 
@@ -88,10 +88,10 @@
 		F514DD2028E4AB5900A7712F /* VC_CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_CreateAccount.swift; sourceTree = "<group>"; };
 		F514DD2228E4B3C300A7712F /* account.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = account.json; sourceTree = "<group>"; };
 		F514DD2328E4B3C300A7712F /* party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = party.json; sourceTree = "<group>"; };
-		F514DD2628E4B66F00A7712F /* VC_Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_Login.swift; sourceTree = "<group>"; };
+		F514DD2628E4B66F00A7712F /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F514DD2828E4E3E500A7712F /* VC_ForgetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_ForgetPassword.swift; sourceTree = "<group>"; };
 		F514DD2A28E4E6D500A7712F /* lock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lock.json; sourceTree = "<group>"; };
-		F538EA8E28DF114E0087E4EE /* VC_HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_HomePage.swift; sourceTree = "<group>"; };
+		F538EA8E28DF114E0087E4EE /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
 		F561BD4128E8779C0010B920 /* VC_FoodDetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_FoodDetailPage.swift; sourceTree = "<group>"; };
 		F561BD4C28E8C4690010B920 /* FoodDetailPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailPagePresenter.swift; sourceTree = "<group>"; };
 		F561BD4E28E8C6960010B920 /* FoodDetailPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailPageInteractor.swift; sourceTree = "<group>"; };
@@ -106,10 +106,8 @@
 		F561BD6828E9CBF70010B920 /* TableViewCell_Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell_Cart.swift; sourceTree = "<group>"; };
 		F561BD6A28E9CEB30010B920 /* deliveryBike.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = deliveryBike.json; sourceTree = "<group>"; };
 		F564C08628DFA82100282EEE /* burger.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = burger.json; sourceTree = "<group>"; };
-		F564C08A28DFAFA700282EEE /* VC_OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_OnBoarding.swift; sourceTree = "<group>"; };
+		F564C08A28DFAFA700282EEE /* OnBoardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
 		F564C08C28DFAFD300282EEE /* OnBoardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingSlide.swift; sourceTree = "<group>"; };
-		F564C08F28DFB47C00282EEE /* CollectionViewCell_OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell_OnBoarding.swift; sourceTree = "<group>"; };
-		F564C09028DFB47C00282EEE /* CollectionViewCell_OnBoarding.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell_OnBoarding.xib; sourceTree = "<group>"; };
 		F58B39CB28E0812700C4ED62 /* motorcycleDelivery.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = motorcycleDelivery.json; sourceTree = "<group>"; };
 		F58B39CC28E0812700C4ED62 /* order.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = order.json; sourceTree = "<group>"; };
 		F58B39CD28E0812700C4ED62 /* deliveryGuyOrder.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = deliveryGuyOrder.json; sourceTree = "<group>"; };
@@ -135,6 +133,8 @@
 		F59377B528E746FB00BF51C1 /* AllFoodResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFoodResponse.swift; sourceTree = "<group>"; };
 		F59377B728E7475400BF51C1 /* CartFoodResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartFoodResponse.swift; sourceTree = "<group>"; };
 		F596139428EA3FE500C6F7B9 /* tik.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tik.json; sourceTree = "<group>"; };
+		F5DFCDEF2C42F24500600D05 /* CollectionViewCell_OnBoarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell_OnBoarding.swift; sourceTree = "<group>"; };
+		F5DFCDF02C42F24500600D05 /* CollectionViewCell_OnBoarding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell_OnBoarding.xib; sourceTree = "<group>"; };
 		F5EF2C5A28E7294C00F67BDD /* CollectionViewCell_Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell_Slider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,7 +202,7 @@
 		F522D92528E457FF00881435 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F564C08A28DFAFA700282EEE /* VC_OnBoarding.swift */,
+				F564C08A28DFAFA700282EEE /* OnBoardingVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -415,8 +415,8 @@
 		F564C08E28DFB44000282EEE /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				F564C08F28DFB47C00282EEE /* CollectionViewCell_OnBoarding.swift */,
-				F564C09028DFB47C00282EEE /* CollectionViewCell_OnBoarding.xib */,
+				F5DFCDEF2C42F24500600D05 /* CollectionViewCell_OnBoarding.swift */,
+				F5DFCDF02C42F24500600D05 /* CollectionViewCell_OnBoarding.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -488,7 +488,7 @@
 		F58CD15328E5E80A0013D644 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				F514DD2628E4B66F00A7712F /* VC_Login.swift */,
+				F514DD2628E4B66F00A7712F /* LoginVC.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -550,7 +550,7 @@
 		F5EF2C5428E70EB000F67BDD /* view */ = {
 			isa = PBXGroup;
 			children = (
-				F538EA8E28DF114E0087E4EE /* VC_HomePage.swift */,
+				F538EA8E28DF114E0087E4EE /* HomePageVC.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -672,8 +672,8 @@
 			files = (
 				F58B39D028E0812700C4ED62 /* motorcycleDelivery.json in Resources */,
 				F514DD2428E4B3C300A7712F /* account.json in Resources */,
+				F5DFCDF22C42F24500600D05 /* CollectionViewCell_OnBoarding.xib in Resources */,
 				F58CD14328E5C2720013D644 /* GoogleService-Info.plist in Resources */,
-				F564C09228DFB47C00282EEE /* CollectionViewCell_OnBoarding.xib in Resources */,
 				F596139528EA3FE500C6F7B9 /* tik.json in Resources */,
 				F514DD2528E4B3C300A7712F /* party.json in Resources */,
 				F58B39D628E08F7400C4ED62 /* discount.json in Resources */,
@@ -702,8 +702,9 @@
 				F561BD5328E8C6B10010B920 /* FoodDetailPageProtocols.swift in Sources */,
 				F514DD2928E4E3E500A7712F /* VC_ForgetPassword.swift in Sources */,
 				F58CD15128E5D2AC0013D644 /* CreateAccountRouter.swift in Sources */,
+				F5DFCDF12C42F24500600D05 /* CollectionViewCell_OnBoarding.swift in Sources */,
 				F561BD5128E8C6A40010B920 /* FoodDetailPageRouter.swift in Sources */,
-				F564C08B28DFAFA700282EEE /* VC_OnBoarding.swift in Sources */,
+				F564C08B28DFAFA700282EEE /* OnBoardingVC.swift in Sources */,
 				F561BD5E28E9CB0A0010B920 /* VC_CartPage.swift in Sources */,
 				F58CD15F28E5E8940013D644 /* LoginProtocols.swift in Sources */,
 				F59377A228E73C2500BF51C1 /* CollectionViewCell_Foods.swift in Sources */,
@@ -715,11 +716,10 @@
 				F561BD6428E9CB5C0010B920 /* CartPageRouter.swift in Sources */,
 				F5002B7128DE5CB600E9A491 /* AppDelegate.swift in Sources */,
 				F561BD6628E9CB690010B920 /* CartPageProtocols.swift in Sources */,
-				F538EA8F28DF114E0087E4EE /* VC_HomePage.swift in Sources */,
+				F538EA8F28DF114E0087E4EE /* HomePageVC.swift in Sources */,
 				F564C08D28DFAFD300282EEE /* OnBoardingSlide.swift in Sources */,
 				F59377A628E73D1B00BF51C1 /* HomePageInteractor.swift in Sources */,
 				F561BD4228E8779C0010B920 /* VC_FoodDetailPage.swift in Sources */,
-				F564C09128DFB47C00282EEE /* CollectionViewCell_OnBoarding.swift in Sources */,
 				F561BD6028E9CB3D0010B920 /* CartPagePresenter.swift in Sources */,
 				F58CD14128E5BC2C0013D644 /* CreateAccountInteractor.swift in Sources */,
 				F59377B228E7437200BF51C1 /* AllFood.swift in Sources */,
@@ -733,7 +733,7 @@
 				F59377B628E746FB00BF51C1 /* AllFoodResponse.swift in Sources */,
 				F5EF2C5B28E7294C00F67BDD /* CollectionViewCell_Slider.swift in Sources */,
 				F561BD6928E9CBF70010B920 /* TableViewCell_Cart.swift in Sources */,
-				F514DD2728E4B66F00A7712F /* VC_Login.swift in Sources */,
+				F514DD2728E4B66F00A7712F /* LoginVC.swift in Sources */,
 				F58CD14F28E5CEA60013D644 /* CreateAccountPresenter.swift in Sources */,
 				F561BD4F28E8C6960010B920 /* FoodDetailPageInteractor.swift in Sources */,
 				F59377A828E73D2900BF51C1 /* HomePageRouter.swift in Sources */,

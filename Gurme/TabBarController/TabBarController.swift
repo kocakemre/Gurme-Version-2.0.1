@@ -7,21 +7,21 @@
 
 import UIKit
 
-
-class TabBarController: UITabBarController {
+private class TabBarController: UITabBarController {
     
     static var customTabBarView = UIView(frame: .zero)
     
     // MARK: - View Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        self.setupTabBarUI()
-        
         var firstViewController:UIViewController = UIViewController()
         // The following statement is what you need
-        var customTabBarItem:UITabBarItem = UITabBarItem(title: nil, image: UIImage(named: "foodIcon")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal), selectedImage: UIImage(named: "foodIcon"))
+        var customTabBarItem:UITabBarItem = UITabBarItem(
+            title: nil,
+            image: UIImage(named: "foodIcon")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal),
+            selectedImage: UIImage(named: "foodIcon")
+        )
         firstViewController.tabBarItem = customTabBarItem
         
         self.tabBar.tintColor = UIColor(named: "MainOrangeColor")
@@ -32,6 +32,7 @@ class TabBarController: UITabBarController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
         self.setupCustomTabBarFrame()
     }
     
@@ -72,6 +73,7 @@ class TabBarController: UITabBarController {
 //    }
     
     private func addCustomTabBarView() {
+        
         TabBarController.customTabBarView.frame = tabBar.frame
         self.tabBar.layer.cornerRadius = 40
         TabBarController.customTabBarView.backgroundColor = .white

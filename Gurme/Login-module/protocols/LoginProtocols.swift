@@ -7,27 +7,28 @@
 
 import Foundation
 
-protocol ViewToPresenterLoginProtocol {
+protocol ViewToPresenterLoginProtocol: AnyObject {
+    
     var loginInteractor: PresenterToInteractorLoginProtocol? { get set }
     var loginView: PresenterToViewLoginProtocol? { get set }
     
     func login(email: String, password: String)
 }
 
-protocol PresenterToInteractorLoginProtocol {
+protocol PresenterToInteractorLoginProtocol: AnyObject {
     var loginPresenter: InteractorToPresenterLoginProtocol? { get set }
     var loginContol: String? { get set } 
     func loginPerson(email: String, password: String)
 }
 
-protocol InteractorToPresenterLoginProtocol {
+protocol InteractorToPresenterLoginProtocol: AnyObject {
     func dataTransferToPresenter(isSuccess: Bool)
 }
 
-protocol PresenterToViewLoginProtocol {
+protocol PresenterToViewLoginProtocol: AnyObject {
     func dataTransferToView(isSuccess: Bool)
 }
 
-protocol PresenterToRouterLoginProtocol {
-    static func createRouter(ref: VC_Login)
+protocol PresenterToRouterLoginProtocol: AnyObject {
+    static func createRouter(ref: LoginVC)
 }

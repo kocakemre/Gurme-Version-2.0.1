@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 struct OnBoardingSlide {
+    
     let titleHead: String
     let titleChild: String
     let animationName: String

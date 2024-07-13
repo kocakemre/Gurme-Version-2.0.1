@@ -10,11 +10,13 @@ import Lottie
 
 class VC_SplashScreen: UIViewController {
 
+    // MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let animationView = AnimationView(name: "burger")
            animationView.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
-       //animationView.frame = view.bounds
+   
             animationView.center = self.view.center
             animationView.contentMode = .scaleAspectFit
             
@@ -24,6 +26,7 @@ class VC_SplashScreen: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: { _ in
             let transition: CATransition = CATransition()
             transition.duration = 0.4
@@ -34,7 +37,5 @@ class VC_SplashScreen: UIViewController {
             self.dismiss(animated: false, completion: nil)
         })
     }
-
-
 }
 

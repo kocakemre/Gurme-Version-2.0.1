@@ -10,7 +10,7 @@ import Foundation
 
 class DetailPageRouter: PresenterToRouterDetailPageProtocol {
     
-    static func createModule(ref: VC_FoodDetailPage) {
+    static func createModule(ref: FoodDetailPageVC) {
         let presenter = DetailPagePresenter()
         
         // View
