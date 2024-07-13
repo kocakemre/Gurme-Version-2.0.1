@@ -32,6 +32,9 @@ A food ordering application was created as part of the **Techcareer.net IOS Deve
 ## Interface
 * iPhone 14 <br/>
 
+## Important
+* If you are experiencing issues when running the application, don't forget to update the packages.
+* Firebase has been disabled to allow direct push to the application.
 
 
 
