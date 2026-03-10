@@ -102,10 +102,19 @@ private extension OnBoardingCell {
             childLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 24),
             childLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -24),
 
-            actionButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -40),
-            actionButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 32),
-            actionButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -32),
-            actionButton.heightAnchor.constraint(equalToConstant: 52)
+            actionButton.bottomAnchor.constraint(
+                equalTo: contentView.bottomAnchor,
+                constant: -Layout.actionButtonBottomInset
+            ),
+            actionButton.leadingAnchor.constraint(
+                equalTo: contentView.leadingAnchor,
+                constant: Layout.horizontalInset
+            ),
+            actionButton.trailingAnchor.constraint(
+                equalTo: contentView.trailingAnchor,
+                constant: -Layout.horizontalInset
+            ),
+            actionButton.heightAnchor.constraint(equalToConstant: Layout.actionButtonHeight)
         ])
     }
 
@@ -114,3 +123,11 @@ private extension OnBoardingCell {
     }
 }
 
+// MARK: - Layout Constants
+private extension OnBoardingCell {
+    enum Layout {
+        static let actionButtonBottomInset: CGFloat = 40
+        static let actionButtonHeight: CGFloat = 52
+        static let horizontalInset: CGFloat = 32
+    }
+}

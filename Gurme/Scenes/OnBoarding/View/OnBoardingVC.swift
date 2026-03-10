@@ -18,8 +18,6 @@ final class OnBoardingVC: UIViewController {
         cv.isPagingEnabled = true
         cv.showsHorizontalScrollIndicator = false
         cv.translatesAutoresizingMaskIntoConstraints = false
-        // Register before assigning delegate/dataSource to avoid any layout-pass
-        // race condition where the collection view requests cells before registration.
         cv.register(
             OnBoardingCell.self,
             forCellWithReuseIdentifier: OnBoardingCell.identifierCell
@@ -32,6 +30,9 @@ final class OnBoardingVC: UIViewController {
     private lazy var pageControl: UIPageControl = {
         let pc = UIPageControl()
         pc.translatesAutoresizingMaskIntoConstraints = false
+        pc.pageIndicatorTintColor = .systemGray4
+        pc.currentPageIndicatorTintColor = .orange
+
         return pc
     }()
 
@@ -84,7 +85,10 @@ extension OnBoardingVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
     }
 
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        currentPage = Int(scrollView.contentOffset.x / scrollView.frame.width)
+        // Use round() to avoid floating-point precision drift on non-integral offsets.
+        let page = Int(round(scrollView.contentOffset.x / scrollView.frame.width))
+        guard page != currentPage else { return }
+        currentPage = page
         pageControl.currentPage = currentPage
     }
 }
@@ -107,8 +111,8 @@ private extension OnBoardingVC {
 
             pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             pageControl.bottomAnchor.constraint(
-                equalTo: view.safeAreaLayoutGuide.bottomAnchor,
-                constant: -16
+                equalTo: view.bottomAnchor,
+                constant: -Layout.pageControlBottomInset
             )
         ])
     }
@@ -155,5 +159,15 @@ private extension OnBoardingVC {
             currentPage = nextIndexPath.item
             pageControl.currentPage = currentPage
         }
+    }
+}
+
+// MARK: - Layout Constants
+private extension OnBoardingVC {
+    enum Layout {
+        static let actionButtonBottomInset: CGFloat = 40
+        static let actionButtonHeight: CGFloat = 52
+        static let pageControlBottomInset: CGFloat =
+        actionButtonBottomInset + actionButtonHeight + 16
     }
 }
