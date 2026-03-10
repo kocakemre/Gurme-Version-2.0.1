@@ -85,7 +85,6 @@ final class WelcomeViewController: UIViewController {
         return button
     }()
 
-    // Axis kuralına uygun isimlendirilmiş StackView
     private lazy var actionsVerticalStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [loginButton, createAccountButton])
         stackView.axis = .vertical

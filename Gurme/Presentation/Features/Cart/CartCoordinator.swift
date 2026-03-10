@@ -29,4 +29,8 @@ final class CartCoordinator: Coordinator {
             animated: false
         )
     }
+
+    func showHome() {
+        navigationController.tabBarController?.selectedIndex = 0
+    }
 }

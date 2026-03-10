@@ -5,6 +5,7 @@
 //  Created by Emre Kocak on 13.07.2024.
 //
 
+import Lottie
 import UIKit
 
 final class CartViewController: UIViewController, AlertShowable {
@@ -51,6 +52,58 @@ final class CartViewController: UIViewController, AlertShowable {
         return button
     }()
 
+    private lazy var emptyStateView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemBackground
+        view.isHidden = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    private lazy var emptyAnimationView: AnimationView = {
+        let animationView = AnimationView()
+        animationView.animation = Animation.named(Constant.Animation.emptyCart)
+        animationView.loopMode = .loop
+        animationView.contentMode = .scaleAspectFit
+        animationView.translatesAutoresizingMaskIntoConstraints = false
+        return animationView
+    }()
+
+    private lazy var emptyTitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = Constant.Text.emptyCartTitle
+        label.font = .boldSystemFont(ofSize: Constant.Layout.emptyTitleFontSize)
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
+    private lazy var emptySubtitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = Constant.Text.emptyCartSubtitle
+        label.font = .systemFont(ofSize: Constant.Layout.emptySubtitleFontSize)
+        label.textColor = .secondaryLabel
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
+    private lazy var shopNowButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle(Constant.Text.shopNowTitle, for: .normal)
+        button.titleLabel?.font = .boldSystemFont(
+            ofSize: Constant.Layout.buttonFontSize
+        )
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = UIColor(
+            named: Constant.Image.mainOrangeColor
+        )
+        button.layer.cornerRadius = Constant.Layout.shopNowCornerRadius
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+
     // MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +126,7 @@ private extension CartViewController {
         setupNavigationBar()
         setupBottomBar()
         setupCollectionView()
+        setupEmptyStateView()
     }
 
     func setupNavigationBar() {
@@ -165,6 +219,98 @@ private extension CartViewController {
             action: #selector(confirmButtonTapped),
             for: .touchUpInside
         )
+        shopNowButton.addTarget(
+            self,
+            action: #selector(shopNowButtonTapped),
+            for: .touchUpInside
+        )
+    }
+
+    func setupEmptyStateView() {
+        view.addSubview(emptyStateView)
+        emptyStateView.addSubview(emptyAnimationView)
+        emptyStateView.addSubview(emptyTitleLabel)
+        emptyStateView.addSubview(emptySubtitleLabel)
+        emptyStateView.addSubview(shopNowButton)
+        NSLayoutConstraint.activate([
+            emptyStateView.topAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.topAnchor
+            ),
+            emptyStateView.leadingAnchor.constraint(
+                equalTo: view.leadingAnchor
+            ),
+            emptyStateView.trailingAnchor.constraint(
+                equalTo: view.trailingAnchor
+            ),
+            emptyStateView.bottomAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.bottomAnchor
+            ),
+            emptyAnimationView.centerXAnchor.constraint(
+                equalTo: emptyStateView.centerXAnchor
+            ),
+            emptyAnimationView.centerYAnchor.constraint(
+                equalTo: emptyStateView.centerYAnchor,
+                constant: -Constant.Layout.animationCenterYOffset
+            ),
+            emptyAnimationView.widthAnchor.constraint(
+                equalToConstant: Constant.Layout.emptyAnimationSize
+            ),
+            emptyAnimationView.heightAnchor.constraint(
+                equalToConstant: Constant.Layout.emptyAnimationSize
+            ),
+            emptyTitleLabel.topAnchor.constraint(
+                equalTo: emptyAnimationView.bottomAnchor,
+                constant: Constant.Layout.titleSpacing
+            ),
+            emptyTitleLabel.leadingAnchor.constraint(
+                equalTo: emptyStateView.leadingAnchor,
+                constant: Constant.Layout.shopNowHorizontalPadding
+            ),
+            emptyTitleLabel.trailingAnchor.constraint(
+                equalTo: emptyStateView.trailingAnchor,
+                constant: -Constant.Layout.shopNowHorizontalPadding
+            ),
+            emptySubtitleLabel.topAnchor.constraint(
+                equalTo: emptyTitleLabel.bottomAnchor,
+                constant: Constant.Layout.subtitleSpacing
+            ),
+            emptySubtitleLabel.leadingAnchor.constraint(
+                equalTo: emptyStateView.leadingAnchor,
+                constant: Constant.Layout.shopNowHorizontalPadding
+            ),
+            emptySubtitleLabel.trailingAnchor.constraint(
+                equalTo: emptyStateView.trailingAnchor,
+                constant: -Constant.Layout.shopNowHorizontalPadding
+            ),
+            shopNowButton.leadingAnchor.constraint(
+                equalTo: emptyStateView.leadingAnchor,
+                constant: Constant.Layout.shopNowHorizontalPadding
+            ),
+            shopNowButton.trailingAnchor.constraint(
+                equalTo: emptyStateView.trailingAnchor,
+                constant: -Constant.Layout.shopNowHorizontalPadding
+            ),
+            shopNowButton.bottomAnchor.constraint(
+                equalTo: emptyStateView.bottomAnchor,
+                constant: -Constant.Layout.shopNowBottomPadding
+            ),
+            shopNowButton.heightAnchor.constraint(
+                equalToConstant: Constant.Layout.shopNowButtonHeight
+            )
+        ])
+    }
+
+    func updateEmptyState() {
+        let isEmpty = viewModel.isEmpty
+        emptyStateView.isHidden = !isEmpty
+        cartCollectionView.isHidden = isEmpty
+        bottomBarView.isHidden = isEmpty
+        navigationItem.rightBarButtonItem?.isEnabled = !isEmpty
+        if isEmpty {
+            emptyAnimationView.play()
+        } else {
+            emptyAnimationView.stop()
+        }
     }
 
     func swipeActions(
@@ -185,6 +331,10 @@ private extension CartViewController {
 
 // MARK: - Action Methods
 private extension CartViewController {
+    @objc func shopNowButtonTapped() {
+        coordinator?.showHome()
+    }
+
     @objc func trashButtonTapped() {
         let alert = UIAlertController(
             title: Constant.Text.warningTitle,
@@ -246,6 +396,7 @@ private extension CartViewController {
 extension CartViewController: CartViewModelDelegate {
     func didUpdateCart() {
         applySnapshot()
+        updateEmptyState()
     }
 
     func didUpdateTotalPrice(_ totalText: String) {
@@ -279,6 +430,20 @@ extension CartViewController {
             static let cornerRadius: CGFloat = 12
             static let priceFontSize: CGFloat = 18
             static let buttonFontSize: CGFloat = 16
+            static let emptyAnimationSize: CGFloat = 220
+            static let animationCenterYOffset: CGFloat = 80
+            static let emptyTitleFontSize: CGFloat = 22
+            static let emptySubtitleFontSize: CGFloat = 15
+            static let titleSpacing: CGFloat = 16
+            static let subtitleSpacing: CGFloat = 8
+            static let shopNowButtonHeight: CGFloat = 52
+            static let shopNowCornerRadius: CGFloat = 26
+            static let shopNowHorizontalPadding: CGFloat = 32
+            static let shopNowBottomPadding: CGFloat = 24
+        }
+
+        enum Animation {
+            static let emptyCart = "orderFood"
         }
 
         enum Image {
@@ -287,7 +452,7 @@ extension CartViewController {
         }
 
         enum Text {
-            static let title = "Sepet"
+            static let title = "Sepetim"
             static let defaultTotal = "TOTAL: 0 TL"
             static let confirmButtonTitle = "Sepeti Onayla"
             static let deleteAction = "Sil"
@@ -299,6 +464,9 @@ extension CartViewController {
             static let orderConfirmedMessage = "Sepetiniz onaylandı!"
             static let errorTitle = "Hata"
             static let okAction = "Tamam"
+            static let emptyCartTitle = "Sepetiniz Boş"
+            static let emptyCartSubtitle = "Sepetinde ürün bulunmamaktadır.\nHemen alışverişe başla!"
+            static let shopNowTitle = "Alışverişe Başla"
         }
     }
 }

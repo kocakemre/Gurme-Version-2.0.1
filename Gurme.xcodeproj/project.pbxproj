@@ -74,39 +74,40 @@
 		F5DFCDF42C42F5F500600D05 /* ItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DFCDF32C42F5F500600D05 /* ItemsList.swift */; };
 		F5DFCDF62C42F80A00600D05 /* DetailPageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DFCDF52C42F80A00600D05 /* DetailPageEntity.swift */; };
 		FF7B88CF217351D221DF58F3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C970F46916E187A505751 /* FavoritesViewController.swift */; };
+			AA0000FF00000000ALERT002 /* AlertShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000FE00000000ALERT001 /* AlertShowable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0310FC887F4ECC853DD13A9C /* RegisterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = Gurme/Scenes/Auth/Register/RegisterViewController.swift; sourceTree = SOURCE_ROOT; };
-		078D79AD8337A868EC86724A /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FavoritesCoordinator.swift; path = Gurme/Coordinators/FavoritesCoordinator.swift; sourceTree = SOURCE_ROOT; };
-		0919204C29AE0D863DD1541E /* SliderCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SliderCell.swift; path = Gurme/Scenes/Home/Cells/SliderCell.swift; sourceTree = SOURCE_ROOT; };
-		16B9C08E9DFCFEA9CFF682EE /* ProfileViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProfileViewModel.swift; path = Gurme/Scenes/Profile/ProfileViewModel.swift; sourceTree = SOURCE_ROOT; };
-		20665F83E135B93015CE89DE /* CartItemCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CartItemCell.swift; path = Gurme/Scenes/Cart/Cells/CartItemCell.swift; sourceTree = SOURCE_ROOT; };
-		24567F3665384F5DC2B0E880 /* Food.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Food.swift; path = Gurme/Models/Food.swift; sourceTree = SOURCE_ROOT; };
-		2538FE05C6AD46EB43336F8A /* ProfileCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProfileCoordinator.swift; path = Gurme/Coordinators/ProfileCoordinator.swift; sourceTree = SOURCE_ROOT; };
-		58724C2D0D195FB926FC6BB4 /* FavoritesRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FavoritesRepository.swift; path = Gurme/Repository/FavoritesRepository.swift; sourceTree = SOURCE_ROOT; };
-		6077155D4FC0E5985D6EDCFE /* AuthCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthCoordinator.swift; path = Gurme/Coordinators/AuthCoordinator.swift; sourceTree = SOURCE_ROOT; };
-		6A7009CE10AD4323148B5EB7 /* CartViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CartViewModel.swift; path = Gurme/Scenes/Cart/CartViewModel.swift; sourceTree = SOURCE_ROOT; };
-		705C3928741CE9EBAB51F0CC /* HomeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Gurme/Scenes/Home/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
-		71C62A9F07E2EB0274F77E1D /* FoodDetailCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoodDetailCoordinator.swift; path = Gurme/Coordinators/FoodDetailCoordinator.swift; sourceTree = SOURCE_ROOT; };
-		8BA3A5113E487150F90831D4 /* LoginViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = Gurme/Scenes/Auth/Login/LoginViewModel.swift; sourceTree = SOURCE_ROOT; };
-		9F7AB10DEEAFDB8AA599FC95 /* NetworkService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = Gurme/Core/Network/NetworkService.swift; sourceTree = SOURCE_ROOT; };
-		9FD5252E9A1CD1133CF11657 /* CartCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CartCoordinator.swift; path = Gurme/Coordinators/CartCoordinator.swift; sourceTree = SOURCE_ROOT; };
-		B8241E2F2296711BA47C8D6A /* Coordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coordinator.swift; path = Gurme/Core/Coordinator/Coordinator.swift; sourceTree = SOURCE_ROOT; };
-		B9D21B2D3AFE802C98C96F7D /* RegisterViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = Gurme/Scenes/Auth/Register/RegisterViewModel.swift; sourceTree = SOURCE_ROOT; };
-		BEC393360B2D0CBD68962A73 /* ProfileViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Gurme/Scenes/Profile/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
-		C624A7D6FAE90D420A1EE505 /* CartViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CartViewController.swift; path = Gurme/Scenes/Cart/CartViewController.swift; sourceTree = SOURCE_ROOT; };
-		C6F17DA4094FD2CD80AFDDA1 /* FoodCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoodCell.swift; path = Gurme/Scenes/Home/Cells/FoodCell.swift; sourceTree = SOURCE_ROOT; };
-		CE5619556F1FD14E0E27A1A1 /* FoodRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoodRepository.swift; path = Gurme/Repository/FoodRepository.swift; sourceTree = SOURCE_ROOT; };
-		D4527DD99108C2F4C6596B91 /* HomeViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = Gurme/Scenes/Home/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
-		D7167F4D188AE9481959F339 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TabBarCoordinator.swift; path = Gurme/Coordinators/TabBarCoordinator.swift; sourceTree = SOURCE_ROOT; };
-		DA2C8BD7ADE00CAECD6A7631 /* AppCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppCoordinator.swift; path = Gurme/Coordinators/AppCoordinator.swift; sourceTree = SOURCE_ROOT; };
-		DBDFC331739DAC2E435703D5 /* FoodDetailViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoodDetailViewModel.swift; path = Gurme/Scenes/FoodDetail/FoodDetailViewModel.swift; sourceTree = SOURCE_ROOT; };
-		E7C3C1BF6FE3FCF28D9D33F3 /* CartRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CartRepository.swift; path = Gurme/Repository/CartRepository.swift; sourceTree = SOURCE_ROOT; };
-		ED275E75F742483687B05982 /* LoginViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Gurme/Scenes/Auth/Login/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
-		EF53BC424418C9FA0F940CA3 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FavoritesViewModel.swift; path = Gurme/Scenes/Favorites/FavoritesViewModel.swift; sourceTree = SOURCE_ROOT; };
-		F02C970F46916E187A505751 /* FavoritesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FavoritesViewController.swift; path = Gurme/Scenes/Favorites/FavoritesViewController.swift; sourceTree = SOURCE_ROOT; };
-		F29BA8622B08F2CBEC062B2B /* HomeCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HomeCoordinator.swift; path = Gurme/Coordinators/HomeCoordinator.swift; sourceTree = SOURCE_ROOT; };
+		0310FC887F4ECC853DD13A9C /* RegisterViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = Gurme/Presentation/Features/Auth/Register/RegisterViewController.swift; sourceTree = SOURCE_ROOT; };
+		078D79AD8337A868EC86724A /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FavoritesCoordinator.swift; path = Gurme/Presentation/Features/Favorites/FavoritesCoordinator.swift; sourceTree = SOURCE_ROOT; };
+		0919204C29AE0D863DD1541E /* SliderCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SliderCell.swift; path = Gurme/Presentation/Features/Home/Cells/SliderCell.swift; sourceTree = SOURCE_ROOT; };
+		16B9C08E9DFCFEA9CFF682EE /* ProfileViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProfileViewModel.swift; path = Gurme/Presentation/Features/Profile/ProfileViewModel.swift; sourceTree = SOURCE_ROOT; };
+		20665F83E135B93015CE89DE /* CartItemCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CartItemCell.swift; path = Gurme/Presentation/Features/Cart/Cells/CartItemCell.swift; sourceTree = SOURCE_ROOT; };
+		24567F3665384F5DC2B0E880 /* Food.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Food.swift; path = Gurme/Domain/Entities/Food.swift; sourceTree = SOURCE_ROOT; };
+		2538FE05C6AD46EB43336F8A /* ProfileCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProfileCoordinator.swift; path = Gurme/Presentation/Features/Profile/ProfileCoordinator.swift; sourceTree = SOURCE_ROOT; };
+		58724C2D0D195FB926FC6BB4 /* FavoritesRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FavoritesRepository.swift; path = Gurme/Data/Repositories/FavoritesRepository.swift; sourceTree = SOURCE_ROOT; };
+		6077155D4FC0E5985D6EDCFE /* AuthCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthCoordinator.swift; path = Gurme/Presentation/Features/Auth/AuthCoordinator.swift; sourceTree = SOURCE_ROOT; };
+		6A7009CE10AD4323148B5EB7 /* CartViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CartViewModel.swift; path = Gurme/Presentation/Features/Cart/CartViewModel.swift; sourceTree = SOURCE_ROOT; };
+		705C3928741CE9EBAB51F0CC /* HomeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Gurme/Presentation/Features/Home/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		71C62A9F07E2EB0274F77E1D /* FoodDetailCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoodDetailCoordinator.swift; path = Gurme/Presentation/Features/FoodDetail/FoodDetailCoordinator.swift; sourceTree = SOURCE_ROOT; };
+		8BA3A5113E487150F90831D4 /* LoginViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = Gurme/Presentation/Features/Auth/Login/LoginViewModel.swift; sourceTree = SOURCE_ROOT; };
+		9F7AB10DEEAFDB8AA599FC95 /* NetworkService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = Gurme/Data/Network/NetworkService.swift; sourceTree = SOURCE_ROOT; };
+		9FD5252E9A1CD1133CF11657 /* CartCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CartCoordinator.swift; path = Gurme/Presentation/Features/Cart/CartCoordinator.swift; sourceTree = SOURCE_ROOT; };
+		B8241E2F2296711BA47C8D6A /* Coordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coordinator.swift; path = Gurme/Presentation/Common/Base/Coordinator.swift; sourceTree = SOURCE_ROOT; };
+		B9D21B2D3AFE802C98C96F7D /* RegisterViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = Gurme/Presentation/Features/Auth/Register/RegisterViewModel.swift; sourceTree = SOURCE_ROOT; };
+		BEC393360B2D0CBD68962A73 /* ProfileViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Gurme/Presentation/Features/Profile/ProfileViewController.swift; sourceTree = SOURCE_ROOT; };
+		C624A7D6FAE90D420A1EE505 /* CartViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CartViewController.swift; path = Gurme/Presentation/Features/Cart/CartViewController.swift; sourceTree = SOURCE_ROOT; };
+		C6F17DA4094FD2CD80AFDDA1 /* FoodCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoodCell.swift; path = Gurme/Presentation/Features/Home/Cells/FoodCell.swift; sourceTree = SOURCE_ROOT; };
+		CE5619556F1FD14E0E27A1A1 /* FoodRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoodRepository.swift; path = Gurme/Data/Repositories/FoodRepository.swift; sourceTree = SOURCE_ROOT; };
+		D4527DD99108C2F4C6596B91 /* HomeViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = Gurme/Presentation/Features/Home/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
+		D7167F4D188AE9481959F339 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TabBarCoordinator.swift; path = Gurme/Presentation/TabBar/TabBarCoordinator.swift; sourceTree = SOURCE_ROOT; };
+		DA2C8BD7ADE00CAECD6A7631 /* AppCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppCoordinator.swift; path = Gurme/Application/AppCoordinator.swift; sourceTree = SOURCE_ROOT; };
+		DBDFC331739DAC2E435703D5 /* FoodDetailViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoodDetailViewModel.swift; path = Gurme/Presentation/Features/FoodDetail/FoodDetailViewModel.swift; sourceTree = SOURCE_ROOT; };
+		E7C3C1BF6FE3FCF28D9D33F3 /* CartRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CartRepository.swift; path = Gurme/Data/Repositories/CartRepository.swift; sourceTree = SOURCE_ROOT; };
+		ED275E75F742483687B05982 /* LoginViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Gurme/Presentation/Features/Auth/Login/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
+		EF53BC424418C9FA0F940CA3 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FavoritesViewModel.swift; path = Gurme/Presentation/Features/Favorites/FavoritesViewModel.swift; sourceTree = SOURCE_ROOT; };
+		F02C970F46916E187A505751 /* FavoritesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FavoritesViewController.swift; path = Gurme/Presentation/Features/Favorites/FavoritesViewController.swift; sourceTree = SOURCE_ROOT; };
+		F29BA8622B08F2CBEC062B2B /* HomeCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HomeCoordinator.swift; path = Gurme/Presentation/Features/Home/HomeCoordinator.swift; sourceTree = SOURCE_ROOT; };
 		F5002B6D28DE5CB600E9A491 /* Gurme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gurme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5002B7028DE5CB600E9A491 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5002B7228DE5CB600E9A491 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,8 +139,9 @@
 		F5DFCDEF2C42F24500600D05 /* OnBoardingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingCell.swift; sourceTree = "<group>"; };
 		F5DFCDF32C42F5F500600D05 /* ItemsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsList.swift; sourceTree = "<group>"; };
 		F5DFCDF52C42F80A00600D05 /* DetailPageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageEntity.swift; sourceTree = "<group>"; };
-		F6BEFD268C7F8934CD27E3C0 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoodDetailViewController.swift; path = Gurme/Scenes/FoodDetail/FoodDetailViewController.swift; sourceTree = SOURCE_ROOT; };
-		F9231D285C9BD2A80D3BD5C2 /* FavoriteFoodCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FavoriteFoodCell.swift; path = Gurme/Scenes/Favorites/Cells/FavoriteFoodCell.swift; sourceTree = SOURCE_ROOT; };
+		F6BEFD268C7F8934CD27E3C0 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoodDetailViewController.swift; path = Gurme/Presentation/Features/FoodDetail/FoodDetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		F9231D285C9BD2A80D3BD5C2 /* FavoriteFoodCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FavoriteFoodCell.swift; path = Gurme/Presentation/Features/Favorites/Cells/FavoriteFoodCell.swift; sourceTree = SOURCE_ROOT; };
+			AA0000FE00000000ALERT001 /* AlertShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlertShowable.swift; path = Gurme/Presentation/Common/Extensions/AlertShowable/AlertShowable.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,203 +161,132 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		12DC213A5970C4B14CEC8147 /* Repository */ = {
+		AA000001 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				F5002B7028DE5CB600E9A491 /* AppDelegate.swift */,
+				F5002B7228DE5CB600E9A491 /* SceneDelegate.swift */,
+				DA2C8BD7ADE00CAECD6A7631 /* AppCoordinator.swift */,
+				F5002B7B28DE5CB600E9A491 /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		AA000002 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AA000003 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		AA000003 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				24567F3665384F5DC2B0E880 /* Food.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		AA000004 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AA000005 /* Network */,
+				AA000007 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AA000005 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9F7AB10DEEAFDB8AA599FC95 /* NetworkService.swift */,
+				AA000006 /* DTOs */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		AA000006 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				F59377B128E7437200BF51C1 /* AllFood.swift */,
+				F59377B528E746FB00BF51C1 /* AllFoodResponse.swift */,
+				F59377B328E743B100BF51C1 /* CartFood.swift */,
+				F59377B728E7475400BF51C1 /* CartFoodResponse.swift */,
+				F5DFCDF32C42F5F500600D05 /* ItemsList.swift */,
+				F5DFCDF52C42F80A00600D05 /* DetailPageEntity.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		AA000007 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
 				CE5619556F1FD14E0E27A1A1 /* FoodRepository.swift */,
 				E7C3C1BF6FE3FCF28D9D33F3 /* CartRepository.swift */,
 				58724C2D0D195FB926FC6BB4 /* FavoritesRepository.swift */,
 			);
-			path = Repository;
+			path = Repositories;
 			sourceTree = "<group>";
 		};
-		14C9D439CE0FFC390CB6F1A7 /* Profile */ = {
+		AA000008 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				16B9C08E9DFCFEA9CFF682EE /* ProfileViewModel.swift */,
-				BEC393360B2D0CBD68962A73 /* ProfileViewController.swift */,
+				AA000009 /* Common */,
+				AA00000C /* Features */,
+				AA00001A /* TabBar */,
 			);
-			path = Profile;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
-		2341829E387C57B2E96D479D /* Favorites */ = {
+		AA000009 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				EF53BC424418C9FA0F940CA3 /* FavoritesViewModel.swift */,
-				F02C970F46916E187A505751 /* FavoritesViewController.swift */,
-				43CED66A4A233D634B80CC14 /* Cells */,
+				AA00000A /* Base */,
 			);
-			path = Favorites;
+			path = Common;
 			sourceTree = "<group>";
 		};
-		37E6331C1E18D7C1D9049574 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				0919204C29AE0D863DD1541E /* SliderCell.swift */,
-				C6F17DA4094FD2CD80AFDDA1 /* FoodCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		3C4D102848D8917E9D4FA3BD /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				8BA3A5113E487150F90831D4 /* LoginViewModel.swift */,
-				ED275E75F742483687B05982 /* LoginViewController.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		424DC65E56402FEAF2A10106 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				24567F3665384F5DC2B0E880 /* Food.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		43CED66A4A233D634B80CC14 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				F9231D285C9BD2A80D3BD5C2 /* FavoriteFoodCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		4B4758DD11546231F1574D7D /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				9F7AB10DEEAFDB8AA599FC95 /* NetworkService.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		532AF4AC6C92A2DD083C9127 /* Coordinator */ = {
+		AA00000A /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				B8241E2F2296711BA47C8D6A /* Coordinator.swift */,
+				AA0000FE00000000ALERT001 /* AlertShowable.swift */,
 			);
-			path = Coordinator;
+			path = Base;
 			sourceTree = "<group>";
 		};
-		744E99C8DB0B5EB4FC123442 /* Core */ = {
+		AA00000C /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				532AF4AC6C92A2DD083C9127 /* Coordinator */,
-				4B4758DD11546231F1574D7D /* Network */,
+				AA00000D /* Splash */,
+				AA00000E /* OnBoarding */,
+				AA000011 /* Auth */,
+				AA000015 /* Home */,
+				AA000017 /* FoodDetail */,
+				AA000018 /* Cart */,
+				AA000019 /* Favorites */,
+				AA00001B /* Profile */,
 			);
-			path = Core;
+			path = Features;
 			sourceTree = "<group>";
 		};
-		748EA10EC2D270E7323103C7 /* Cart */ = {
+		AA00000D /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				6A7009CE10AD4323148B5EB7 /* CartViewModel.swift */,
-				C624A7D6FAE90D420A1EE505 /* CartViewController.swift */,
-				C95B56F76E7C0CF36D1BB64A /* Cells */,
+				F5002B7428DE5CB600E9A491 /* SplashScreenVC.swift */,
 			);
-			path = Cart;
+			path = Splash;
 			sourceTree = "<group>";
 		};
-		AC80A94929AF872783B46742 /* FoodDetail */ = {
+		AA00000E /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
-				DBDFC331739DAC2E435703D5 /* FoodDetailViewModel.swift */,
-				F6BEFD268C7F8934CD27E3C0 /* FoodDetailViewController.swift */,
+				F522D92528E457FF00881435 /* View */,
+				F564C08E28DFB44000282EEE /* Cell */,
+				F564C08C28DFAFD300282EEE /* OnBoardingSlide.swift */,
 			);
-			path = FoodDetail;
-			sourceTree = "<group>";
-		};
-		BB805E527B14FB1DD4D46D40 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				3C4D102848D8917E9D4FA3BD /* Login */,
-				F2449D1FF5207A8311565D8A /* Register */,
-			);
-			path = Auth;
-			sourceTree = "<group>";
-		};
-		C4DAF7794BC1379CF54BC76C /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				D4527DD99108C2F4C6596B91 /* HomeViewModel.swift */,
-				705C3928741CE9EBAB51F0CC /* HomeViewController.swift */,
-				37E6331C1E18D7C1D9049574 /* Cells */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		C95B56F76E7C0CF36D1BB64A /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				20665F83E135B93015CE89DE /* CartItemCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		D32CA832F6541C6759909577 /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				DA2C8BD7ADE00CAECD6A7631 /* AppCoordinator.swift */,
-				6077155D4FC0E5985D6EDCFE /* AuthCoordinator.swift */,
-				9FD5252E9A1CD1133CF11657 /* CartCoordinator.swift */,
-				078D79AD8337A868EC86724A /* FavoritesCoordinator.swift */,
-				71C62A9F07E2EB0274F77E1D /* FoodDetailCoordinator.swift */,
-				F29BA8622B08F2CBEC062B2B /* HomeCoordinator.swift */,
-				D7167F4D188AE9481959F339 /* TabBarCoordinator.swift */,
-				2538FE05C6AD46EB43336F8A /* ProfileCoordinator.swift */,
-			);
-			path = Coordinators;
-			sourceTree = "<group>";
-		};
-		F2449D1FF5207A8311565D8A /* Register */ = {
-			isa = PBXGroup;
-			children = (
-				B9D21B2D3AFE802C98C96F7D /* RegisterViewModel.swift */,
-				0310FC887F4ECC853DD13A9C /* RegisterViewController.swift */,
-			);
-			path = Register;
-			sourceTree = "<group>";
-		};
-		F5002B6428DE5CB600E9A491 = {
-			isa = PBXGroup;
-			children = (
-				F5002B6F28DE5CB600E9A491 /* Gurme */,
-				F5002B6E28DE5CB600E9A491 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		F5002B6E28DE5CB600E9A491 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F5002B6D28DE5CB600E9A491 /* Gurme.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F5002B6F28DE5CB600E9A491 /* Gurme */ = {
-			isa = PBXGroup;
-			children = (
-				F5EF2C5928E70ED400F67BDD /* Entity */,
-				F564C08828DFAF6100282EEE /* Scenes */,
-				F538EA8628DF0E8A0087E4EE /* SplashScreenView */,
-				F561BD4B28E8C3260010B920 /* TabBarController */,
-				F522D92728E4588300881435 /* App Start */,
-				F522D92628E4583900881435 /* Support Files */,
-				744E99C8DB0B5EB4FC123442 /* Core */,
-				424DC65E56402FEAF2A10106 /* Models */,
-				12DC213A5970C4B14CEC8147 /* Repository */,
-				D32CA832F6541C6759909577 /* Coordinators */,
-			);
-			path = Gurme;
-			sourceTree = "<group>";
-		};
-		F514DD1B28E4623B00A7712F /* EnteringScreens */ = {
-			isa = PBXGroup;
-			children = (
-				F514DD1C28E462B200A7712F /* WelcomeViewController.swift */,
-			);
-			path = EnteringScreens;
+			path = OnBoarding;
 			sourceTree = "<group>";
 		};
 		F522D92528E457FF00881435 /* View */ = {
@@ -364,6 +295,138 @@
 				F564C08A28DFAFA700282EEE /* OnBoardingVC.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F564C08E28DFB44000282EEE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F5DFCDEF2C42F24500600D05 /* OnBoardingCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		AA000011 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				6077155D4FC0E5985D6EDCFE /* AuthCoordinator.swift */,
+				AA000012 /* Welcome */,
+				AA000013 /* Login */,
+				AA000014 /* Register */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		AA000012 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				F514DD1C28E462B200A7712F /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		AA000013 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8BA3A5113E487150F90831D4 /* LoginViewModel.swift */,
+				ED275E75F742483687B05982 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		AA000014 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				B9D21B2D3AFE802C98C96F7D /* RegisterViewModel.swift */,
+				0310FC887F4ECC853DD13A9C /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		AA000015 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F29BA8622B08F2CBEC062B2B /* HomeCoordinator.swift */,
+				D4527DD99108C2F4C6596B91 /* HomeViewModel.swift */,
+				705C3928741CE9EBAB51F0CC /* HomeViewController.swift */,
+				AA000016 /* Cells */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AA000016 /* HomeCells */ = {
+			isa = PBXGroup;
+			children = (
+				0919204C29AE0D863DD1541E /* SliderCell.swift */,
+				C6F17DA4094FD2CD80AFDDA1 /* FoodCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AA000017 /* FoodDetail */ = {
+			isa = PBXGroup;
+			children = (
+				71C62A9F07E2EB0274F77E1D /* FoodDetailCoordinator.swift */,
+				DBDFC331739DAC2E435703D5 /* FoodDetailViewModel.swift */,
+				F6BEFD268C7F8934CD27E3C0 /* FoodDetailViewController.swift */,
+			);
+			path = FoodDetail;
+			sourceTree = "<group>";
+		};
+		AA000018 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				9FD5252E9A1CD1133CF11657 /* CartCoordinator.swift */,
+				6A7009CE10AD4323148B5EB7 /* CartViewModel.swift */,
+				C624A7D6FAE90D420A1EE505 /* CartViewController.swift */,
+				AA00001C /* CartCells */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		AA00001C /* CartCells */ = {
+			isa = PBXGroup;
+			children = (
+				20665F83E135B93015CE89DE /* CartItemCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AA000019 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				078D79AD8337A868EC86724A /* FavoritesCoordinator.swift */,
+				EF53BC424418C9FA0F940CA3 /* FavoritesViewModel.swift */,
+				F02C970F46916E187A505751 /* FavoritesViewController.swift */,
+				AA00001D /* FavCells */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		AA00001D /* FavCells */ = {
+			isa = PBXGroup;
+			children = (
+				F9231D285C9BD2A80D3BD5C2 /* FavoriteFoodCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AA00001A /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D7167F4D188AE9481959F339 /* TabBarCoordinator.swift */,
+				F58CD16028E62B280013D644 /* TabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		AA00001B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2538FE05C6AD46EB43336F8A /* ProfileCoordinator.swift */,
+				16B9C08E9DFCFEA9CFF682EE /* ProfileViewModel.swift */,
+				BEC393360B2D0CBD68962A73 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		F522D92628E4583900881435 /* Support Files */ = {
@@ -388,76 +451,32 @@
 			path = "Support Files";
 			sourceTree = "<group>";
 		};
-		F522D92728E4588300881435 /* App Start */ = {
+		F5002B6428DE5CB600E9A491 = {
 			isa = PBXGroup;
 			children = (
-				F5002B7228DE5CB600E9A491 /* SceneDelegate.swift */,
-				F5002B7028DE5CB600E9A491 /* AppDelegate.swift */,
-				F5002B7B28DE5CB600E9A491 /* LaunchScreen.storyboard */,
+				F5002B6F28DE5CB600E9A491 /* Gurme */,
+				F5002B6E28DE5CB600E9A491 /* Products */,
 			);
-			path = "App Start";
 			sourceTree = "<group>";
 		};
-		F538EA8628DF0E8A0087E4EE /* SplashScreenView */ = {
+		F5002B6E28DE5CB600E9A491 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F5002B7428DE5CB600E9A491 /* SplashScreenVC.swift */,
+				F5002B6D28DE5CB600E9A491 /* Gurme.app */,
 			);
-			path = SplashScreenView;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		F561BD4B28E8C3260010B920 /* TabBarController */ = {
+		F5002B6F28DE5CB600E9A491 /* Gurme */ = {
 			isa = PBXGroup;
 			children = (
-				F58CD16028E62B280013D644 /* TabBarController.swift */,
+				AA000001 /* Application */,
+				AA000002 /* Domain */,
+				AA000004 /* Data */,
+				AA000008 /* Presentation */,
+				F522D92628E4583900881435 /* Support Files */,
 			);
-			path = TabBarController;
-			sourceTree = "<group>";
-		};
-		F564C08828DFAF6100282EEE /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				F514DD1B28E4623B00A7712F /* EnteringScreens */,
-				F564C08928DFAF7500282EEE /* OnBoarding */,
-				C4DAF7794BC1379CF54BC76C /* Home */,
-				2341829E387C57B2E96D479D /* Favorites */,
-				748EA10EC2D270E7323103C7 /* Cart */,
-				AC80A94929AF872783B46742 /* FoodDetail */,
-				BB805E527B14FB1DD4D46D40 /* Auth */,
-				14C9D439CE0FFC390CB6F1A7 /* Profile */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
-		F564C08928DFAF7500282EEE /* OnBoarding */ = {
-			isa = PBXGroup;
-			children = (
-				F522D92528E457FF00881435 /* View */,
-				F564C08E28DFB44000282EEE /* Cell */,
-				F564C08C28DFAFD300282EEE /* OnBoardingSlide.swift */,
-			);
-			path = OnBoarding;
-			sourceTree = "<group>";
-		};
-		F564C08E28DFB44000282EEE /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				F5DFCDEF2C42F24500600D05 /* OnBoardingCell.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
-		F5EF2C5928E70ED400F67BDD /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				F59377B128E7437200BF51C1 /* AllFood.swift */,
-				F59377B328E743B100BF51C1 /* CartFood.swift */,
-				F59377B528E746FB00BF51C1 /* AllFoodResponse.swift */,
-				F59377B728E7475400BF51C1 /* CartFoodResponse.swift */,
-				F5DFCDF32C42F5F500600D05 /* ItemsList.swift */,
-				F5DFCDF52C42F80A00600D05 /* DetailPageEntity.swift */,
-			);
-			path = Entity;
+			path = Gurme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -603,6 +622,7 @@
 				C4A1781FC601CAC4703F1E1A /* ProfileViewModel.swift in Sources */,
 				BB95FAF19B60BBC26093B14E /* ProfileViewController.swift in Sources */,
 				0A03BD95DB5AAD09E22502A5 /* ProfileCoordinator.swift in Sources */,
+				AA0000FF00000000ALERT002 /* AlertShowable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,7 +763,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2D4ZSKQP5M;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Gurme/Support Files/Info.plist";
+				INFOPLIST_FILE = Gurme/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -772,7 +792,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2D4ZSKQP5M;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Gurme/Support Files/Info.plist";
+				INFOPLIST_FILE = Gurme/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
