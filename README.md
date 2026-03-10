@@ -24,11 +24,11 @@
 
 | Splash | OnBoarding | Login | Home |
 |:------:|:----------:|:-----:|:----:|
-| [Insert Screenshot] | [Insert Screenshot] | [Insert Screenshot] | [Insert Screenshot] |
+| ![App Screenshot](Assets/Splash.png) | ![App Screenshot](Assets/OnBoarding.png) | ![App Screenshot](Assets/Login.png) | ![App Screenshot](Assets/Home.png) |
 
 | Food Detail | Favorites | Cart | Profile |
 |:-----------:|:---------:|:----:|:-------:|
-| [Insert Screenshot] | [Insert Screenshot] | [Insert Screenshot] | [Insert Screenshot] |
+| ![App Screenshot](Assets/FoodDetail.png) | ![App Screenshot](Assets/Favorites.png) | ![App Screenshot](Assets/Cart.png) | ![App Screenshot](Assets/Profile.png) |
 
 ---
 
