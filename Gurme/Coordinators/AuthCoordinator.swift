@@ -28,8 +28,21 @@ final class AuthCoordinator: Coordinator {
 
     func showLogin() {
         let viewController = WelcomeViewController()
+        viewController.coordinator = self
         navigationController.setViewControllers(
             [viewController],
+            animated: true
+        )
+    }
+
+    func showLoginPage() {
+        let viewModel = LoginViewModel()
+        let viewController = LoginViewController()
+        viewController.viewModel = viewModel
+        viewModel.delegate = viewController
+        viewController.coordinator = self
+        navigationController.pushViewController(
+            viewController,
             animated: true
         )
     }

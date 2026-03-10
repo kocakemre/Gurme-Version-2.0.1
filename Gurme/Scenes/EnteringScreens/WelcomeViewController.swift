@@ -96,6 +96,7 @@ final class WelcomeViewController: UIViewController {
     }()
 
     // MARK: - Properties
+    weak var coordinator: AuthCoordinator?
     var onLoginTapped: (() -> Void)?
     var onCreateAccountTapped: (() -> Void)?
 
@@ -168,10 +169,12 @@ final class WelcomeViewController: UIViewController {
 
     // MARK: - Action Methods
     @objc private func loginButtonTapped() {
+        coordinator?.showLoginPage()
         onLoginTapped?()
     }
 
     @objc private func createAccountButtonTapped() {
+        coordinator?.showRegister()
         onCreateAccountTapped?()
     }
 }
