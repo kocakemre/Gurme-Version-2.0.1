@@ -7,65 +7,75 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "595AD2FC-7192-459A-BDE7-C122BC1DF4BF"
+            uuid = "660B09BF-240A-4330-8F77-A9F7BBC9AD7A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Gurme/Login-module/presenter/LoginPresenter.swift"
+            filePath = "Gurme/Scenes/OnBoarding/View/OnBoardingVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "login(email:password:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1C85A34F-392D-4860-9FF9-C60D92F0E25F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Gurme/Login-module/interactor/LoginInteractor.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "loginPerson(email:password:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D9A701B0-617B-450D-8FD8-C391AAD937BD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Gurme/Login-module/router/LoginRouter.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "createRouter(ref:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "84E24B90-4DF1-4708-8814-CD08B7BE4F1C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Gurme/Login-module/view/LoginVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "btnLoginClicked_TUI(_:)"
-            landmarkType = "7">
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "OnBoardingVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "660B09BF-240A-4330-8F77-A9F7BBC9AD7A - eccf4f2d25008804"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gurme.OnBoardingVC.slides.getter : Swift.Array&lt;Gurme.OnBoardingSlide&gt;"
+                  moduleName = "Gurme.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrekocak/Developer/Gurme-Version-2.0.1/Gurme/Scenes/OnBoarding/View/OnBoardingVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "660B09BF-240A-4330-8F77-A9F7BBC9AD7A - c59d1371d12d9698"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gurme.OnBoardingVC.slides.setter : Swift.Array&lt;Gurme.OnBoardingSlide&gt;"
+                  moduleName = "Gurme.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrekocak/Developer/Gurme-Version-2.0.1/Gurme/Scenes/OnBoarding/View/OnBoardingVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "660B09BF-240A-4330-8F77-A9F7BBC9AD7A - 40069b8b7157a1cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gurme.OnBoardingVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Gurme.OnBoardingVC"
+                  moduleName = "Gurme.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrekocak/Developer/Gurme-Version-2.0.1/Gurme/Scenes/OnBoarding/View/OnBoardingVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40">
+               </Location>
+               <Location
+                  uuid = "660B09BF-240A-4330-8F77-A9F7BBC9AD7A - 90c19514cf0d5844"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Gurme.OnBoardingVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Gurme.OnBoardingVC&gt;"
+                  moduleName = "Gurme.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emrekocak/Developer/Gurme-Version-2.0.1/Gurme/Scenes/OnBoarding/View/OnBoardingVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

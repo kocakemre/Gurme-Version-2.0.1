@@ -5,36 +5,51 @@
 //  Created by Emre Kocak on 24.09.2022.
 //
 
-import UIKit
 import Lottie
+import UIKit
 
 final class SplashScreenVC: UIViewController {
+
+    // MARK: - UI Properties
+    private let animationView: AnimationView = {
+        let view = AnimationView(name: "burger")
+        view.contentMode = .scaleAspectFit
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    // MARK: - Properties
+    var onComplete: (() -> Void)?
+    private var hasNavigated = false
 
     // MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let animationView = AnimationView(name: "burger")
-           animationView.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
-   
-            animationView.center = self.view.center
-            animationView.contentMode = .scaleAspectFit
-            
-            view.addSubview(animationView)
-        
-            animationView.play()
+        view.backgroundColor = .systemBackground
+        view.addSubview(animationView)
+
+        NSLayoutConstraint.activate([
+            animationView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            animationView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            animationView.widthAnchor.constraint(equalToConstant: 300),
+            animationView.heightAnchor.constraint(equalToConstant: 300)
+        ])
+
+        animationView.play()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
-        
-        Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: { _ in
-            let transition: CATransition = CATransition()
-            transition.duration = 0.4
-            transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-            transition.type = CATransitionType.moveIn
-            transition.subtype = CATransitionSubtype.fromTop
-            self.view.window!.layer.add(transition, forKey: nil)
-            self.dismiss(animated: false, completion: nil)
-        })
+        super.viewDidAppear(animated)
+        guard !hasNavigated else { return }
+
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { [weak self] _ in
+            guard let self, !self.hasNavigated else { return }
+            self.hasNavigated = true
+            // Defer to next run loop cycle so current call stack (and any UIKit
+            // lifecycle finalization on this VC) completes before rootVC changes.
+            DispatchQueue.main.async {
+                self.onComplete?()
+            }
+        }
     }
 }

@@ -10,7 +10,7 @@ import Lottie
 
 class VC_Welcome: UIViewController {
     
-    // MARK: - UI Elements
+    // MARK: - UI Properties
     
     @IBOutlet weak var lottieView: AnimationView!
     @IBOutlet weak var welcomeView: UIView!
