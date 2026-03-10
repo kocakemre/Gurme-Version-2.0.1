@@ -202,14 +202,22 @@ Gurme/
 ## License
 
 ```
-[Insert License Here — e.g., MIT, Apache 2.0]
+MIT
 ```
 
 ---
 
 ## Contact
 
-[Insert your name, email, LinkedIn, or Twitter handle here]
+- 📬 Reach me at m.emrekocakk@gmail.com.
+- 📌 You may also want to check out the following: [medium]
+
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://www.linkedin.com/in/kocakemre/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="kocakemre" height="30" width="40" /></a>
+
+[linkedin]: https://www.linkedin.com/in/kocakemre/
+[medium]: https://medium.com/@kocakemre
 
 ---
 
