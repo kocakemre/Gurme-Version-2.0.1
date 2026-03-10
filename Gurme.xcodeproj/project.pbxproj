@@ -43,7 +43,7 @@
 		F5002B7528DE5CB600E9A491 /* SplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5002B7428DE5CB600E9A491 /* SplashScreenVC.swift */; };
 		F5002B7A28DE5CB600E9A491 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5002B7928DE5CB600E9A491 /* Assets.xcassets */; };
 		F5002B7D28DE5CB600E9A491 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5002B7B28DE5CB600E9A491 /* LaunchScreen.storyboard */; };
-		F514DD1D28E462B200A7712F /* VC_Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = F514DD1C28E462B200A7712F /* VC_Welcome.swift */; };
+		F514DD1D28E462B200A7712F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F514DD1C28E462B200A7712F /* WelcomeViewController.swift */; };
 		F514DD1F28E4699F00A7712F /* hii.json in Resources */ = {isa = PBXBuildFile; fileRef = F514DD1E28E4699F00A7712F /* hii.json */; };
 		F514DD2428E4B3C300A7712F /* account.json in Resources */ = {isa = PBXBuildFile; fileRef = F514DD2228E4B3C300A7712F /* account.json */; };
 		F514DD2528E4B3C300A7712F /* party.json in Resources */ = {isa = PBXBuildFile; fileRef = F514DD2328E4B3C300A7712F /* party.json */; };
@@ -114,7 +114,7 @@
 		F5002B7928DE5CB600E9A491 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5002B7C28DE5CB600E9A491 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5002B7E28DE5CB600E9A491 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F514DD1C28E462B200A7712F /* VC_Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC_Welcome.swift; sourceTree = "<group>"; };
+		F514DD1C28E462B200A7712F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		F514DD1E28E4699F00A7712F /* hii.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hii.json; sourceTree = "<group>"; };
 		F514DD2228E4B3C300A7712F /* account.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = account.json; sourceTree = "<group>"; };
 		F514DD2328E4B3C300A7712F /* party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = party.json; sourceTree = "<group>"; };
@@ -353,7 +353,7 @@
 		F514DD1B28E4623B00A7712F /* EnteringScreens */ = {
 			isa = PBXGroup;
 			children = (
-				F514DD1C28E462B200A7712F /* VC_Welcome.swift */,
+				F514DD1C28E462B200A7712F /* WelcomeViewController.swift */,
 			);
 			path = EnteringScreens;
 			sourceTree = "<group>";
@@ -570,7 +570,7 @@
 				F5002B7328DE5CB600E9A491 /* SceneDelegate.swift in Sources */,
 				F59377B628E746FB00BF51C1 /* AllFoodResponse.swift in Sources */,
 				F5DFCDF42C42F5F500600D05 /* ItemsList.swift in Sources */,
-				F514DD1D28E462B200A7712F /* VC_Welcome.swift in Sources */,
+				F514DD1D28E462B200A7712F /* WelcomeViewController.swift in Sources */,
 				EC83DE605FB33A181CC5CFE2 /* Coordinator.swift in Sources */,
 				359ABD83B7C7D875F80C248B /* NetworkService.swift in Sources */,
 				8674C9F799DE4DF09130FF17 /* Food.swift in Sources */,

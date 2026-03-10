@@ -148,13 +148,10 @@ private extension FavoritesViewController {
 // MARK: - DiffableDataSource
 private extension FavoritesViewController {
     func configureDataSource() {
-        let cellRegistration = UICollectionView.CellRegistration
-        <FavoriteFoodCell, Food> { cell, _, food in
+        let cellRegistration = UICollectionView.CellRegistration<FavoriteFoodCell, Food> { cell, _, food in
             cell.configure(with: food)
         }
-        favoriteDataSource = UICollectionViewDiffableDataSource<
-            Int, Food
-        >(
+        favoriteDataSource = UICollectionViewDiffableDataSource<Int, Food>(
             collectionView: favoriteCollectionView
         ) { collectionView, indexPath, food in
             collectionView.dequeueConfiguredReusableCell(
