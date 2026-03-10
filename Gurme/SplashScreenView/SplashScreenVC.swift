@@ -45,8 +45,6 @@ final class SplashScreenVC: UIViewController {
         Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { [weak self] _ in
             guard let self, !self.hasNavigated else { return }
             self.hasNavigated = true
-            // Defer to next run loop cycle so current call stack (and any UIKit
-            // lifecycle finalization on this VC) completes before rootVC changes.
             DispatchQueue.main.async {
                 self.onComplete?()
             }

@@ -249,6 +249,7 @@ private extension LoginViewController {
             createAccountButton.leadingAnchor.constraint(equalTo: formVerticalStackView.leadingAnchor),
             createAccountButton.trailingAnchor.constraint(equalTo: formVerticalStackView.trailingAnchor),
             createAccountButton.heightAnchor.constraint(equalToConstant: Constants.Layout.buttonHeight),
+            createAccountButton.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -16),
 
             // Party Animation View
             partyAnimationView.topAnchor.constraint(equalTo: accountAnimationView.bottomAnchor, constant: Constants.Layout.partyAnimTop),

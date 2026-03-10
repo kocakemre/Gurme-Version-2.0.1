@@ -66,6 +66,7 @@ private extension AppCoordinator {
         let tabCoordinator = TabBarCoordinator(
             navigationController: navigationController
         )
+        tabCoordinator.delegate = self
         addChild(tabCoordinator)
         tabCoordinator.start()
         transition(to: tabCoordinator.tabBarController)
@@ -102,5 +103,13 @@ extension AppCoordinator: AuthCoordinatorDelegate {
     func didFinishAuth(_ coordinator: AuthCoordinator) {
         removeChild(coordinator)
         showMainTab()
+    }
+}
+
+// MARK: - TabBarCoordinatorDelegate
+extension AppCoordinator: TabBarCoordinatorDelegate {
+    func didRequestLogout(_ coordinator: TabBarCoordinator) {
+        removeChild(coordinator)
+        showAuth()
     }
 }

@@ -7,10 +7,16 @@
 
 import UIKit
 
+// MARK: - TabBarCoordinatorDelegate
+protocol TabBarCoordinatorDelegate: AnyObject {
+    func didRequestLogout(_ coordinator: TabBarCoordinator)
+}
+
 final class TabBarCoordinator: NSObject, Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
     let tabBarController: UITabBarController
+    weak var delegate: TabBarCoordinatorDelegate?
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -35,6 +41,8 @@ final class TabBarCoordinator: NSObject, Coordinator {
         let profileCoordinator = ProfileCoordinator(
             navigationController: profileNavigationController
         )
+
+        profileCoordinator.delegate = self
 
         addChild(homeCoordinator)
         addChild(favoritesCoordinator)
@@ -105,6 +113,13 @@ private extension TabBarCoordinator {
         appearance.backgroundColor = .systemBackground
         tabBarController.tabBar.standardAppearance = appearance
         tabBarController.tabBar.scrollEdgeAppearance = appearance
+    }
+}
+
+// MARK: - ProfileCoordinatorDelegate
+extension TabBarCoordinator: ProfileCoordinatorDelegate {
+    func didRequestLogout(_ coordinator: ProfileCoordinator) {
+        delegate?.didRequestLogout(self)
     }
 }
 
